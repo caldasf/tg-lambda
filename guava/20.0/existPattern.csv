@@ -1,0 +1,5 @@
+typeProject;before;project;version;file;start;end;stmts;
+application;yes;Guava;20;/home/luna/workspace/scriptsMSR/projects/guava/guava/src/com/google/common/collect/AbstractTable.java;60;64;0;
+application;yes;Guava;20;/home/luna/workspace/scriptsMSR/projects/guava/guava/src/com/google/common/collect/AbstractMultimap.java;48;52;0;
+application;yes;Guava;20;/home/luna/workspace/scriptsMSR/projects/guava/guava/src/com/google/common/collect/AbstractTable.java;60;64;0;
+application;yes;Guava;20;/home/luna/workspace/scriptsMSR/projects/guava/guava/src/com/google/common/collect/AbstractMultimap.java;48;52;0;
