@@ -1,6 +1,9 @@
 package entities;
 
+@Entity
 public class Projeto {
+	@Id
+	@GeneratedValue
 	private Integer id;
 	private String nome;
 	

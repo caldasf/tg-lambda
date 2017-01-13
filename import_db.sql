@@ -10,8 +10,6 @@ CREATE TABLE Projeto
 );
 
 
-DROP TABLE IF EXISTS Projeto;
-
 CREATE TABLE Versao
 (
 	idVersao int NOT NULL,
