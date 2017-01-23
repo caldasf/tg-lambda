@@ -2,10 +2,12 @@ package entities;
 
 import java.io.Serializable;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Classe implements Serializable {
@@ -13,7 +15,8 @@ public class Classe implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer idClasse;
-	private Projeto projeto;
+	@ManyToOne(cascade = CascadeType.ALL)
+	private Projeto idProjeto;
 	private String nome;
 	
 	public Integer getId() {
@@ -23,10 +26,10 @@ public class Classe implements Serializable {
 		this.idClasse = id;
 	}
 	public Projeto getProjeto() {
-		return projeto;
+		return idProjeto;
 	}
 	public void setProjeto(Projeto projeto) {
-		this.projeto = projeto;
+		this.idProjeto = projeto;
 	}
 	public String getNome() {
 		return nome;

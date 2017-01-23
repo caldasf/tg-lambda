@@ -2,10 +2,13 @@ package entities;
 
 import java.io.Serializable;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.Transient;
 
 @Entity
 public class Metodo implements Serializable {
@@ -20,15 +23,16 @@ public class Metodo implements Serializable {
 	private Integer qtdFilter;
 	private Integer qtdMaps;
 	
-	private Integer linhaInicio;
-	private Integer linhaFim;
-	private Classe classe;
+	@Transient private Integer linhaInicio;
+	@Transient private Integer linhaFim;
+	@ManyToOne(cascade = CascadeType.ALL)
+	private Classe idClasse;
 	
 	public Classe getClasse() {
-		return classe;
+		return idClasse;
 	}
 	public void setClasse(Classe classe) {
-		this.classe = classe;
+		this.idClasse = classe;
 	}
 	public Integer getLinhaInicio() {
 		return linhaInicio;

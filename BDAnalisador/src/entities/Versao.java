@@ -13,7 +13,7 @@ public class Versao implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer idVersao;
-	private Projeto projeto;
+	private Projeto idProjeto;
 	private String numVersao;
 	
 	public Integer getId() {
@@ -23,10 +23,10 @@ public class Versao implements Serializable {
 		this.idVersao = id;
 	}
 	public Projeto getProjeto() {
-		return projeto;
+		return idProjeto;
 	}
 	public void setProjeto(Projeto projeto) {
-		this.projeto = projeto;
+		this.idProjeto = projeto;
 	}
 	public String getNumVersao() {
 		return numVersao;
