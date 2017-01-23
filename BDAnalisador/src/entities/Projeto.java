@@ -1,17 +1,25 @@
 package entities;
 
+import java.io.Serializable;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
 @Entity
-public class Projeto {
+public class Projeto implements Serializable {
+	private static final long serialVersionUID = 1L;
 	@Id
-	@GeneratedValue
-	private Integer id;
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Integer idProjeto;
 	private String nome;
 	
 	public Integer getId() {
-		return id;
+		return idProjeto;
 	}
 	public void setId(Integer id) {
-		this.id = id;
+		this.idProjeto = id;
 	}
 	public String getNome() {
 		return nome;

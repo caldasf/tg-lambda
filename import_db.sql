@@ -3,7 +3,7 @@ DROP TABLE IF EXISTS Projeto;
 
 CREATE TABLE Projeto
 (
-	idProjeto int NOT NULL, 
+	idProjeto int NOT NULL AUTO_INCREMENT, 
 	nome VARCHAR(200),
 	PRIMARY KEY (idProjeto)
 
@@ -12,7 +12,7 @@ CREATE TABLE Projeto
 
 CREATE TABLE Versao
 (
-	idVersao int NOT NULL,
+	idVersao int NOT NULL AUTO_INCREMENT,
 	idProjeto int NOT NULL,
 	nome VARCHAR(200),
 	PRIMARY KEY (idVersao),
@@ -21,7 +21,7 @@ CREATE TABLE Versao
 
 CREATE TABLE Classe
 (
-	idClasse int NOT NULL,
+	idClasse int NOT NULL AUTO_INCREMENT,
 	idProjeto int NOT NULL,
 	nome VARCHAR(200),
 	PRIMARY KEY (idClasse),
@@ -30,7 +30,7 @@ CREATE TABLE Classe
 
 CREATE TABLE Metodo
 (
-	idMetodo int NOT NULL,
+	idMetodo int NOT NULL AUTO_INCREMENT,
 	idClasse int NOT NULL,
 	nome VARCHAR(200),
 	QtdLambda int,
