@@ -16,7 +16,7 @@ public class Classe implements Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer idClasse;
 	
-	private Integer idProjeto;
+	private Integer idVersao;
 	private String nome;
 	
 	public Integer getId() {
@@ -25,11 +25,11 @@ public class Classe implements Serializable {
 	public void setId(Integer id) {
 		this.idClasse = id;
 	}
-	public Integer getProjeto() {
-		return idProjeto;
+	public Integer getVersao() {
+		return idVersao;
 	}
-	public void setProjeto(Integer projeto) {
-		this.idProjeto = projeto;
+	public void setVersao(Integer versao) {
+		this.idVersao = versao;
 	}
 	public String getNome() {
 		return nome;

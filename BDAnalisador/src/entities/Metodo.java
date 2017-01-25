@@ -2,12 +2,10 @@ package entities;
 
 import java.io.Serializable;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
 import javax.persistence.Transient;
 
 @Entity
@@ -22,15 +20,37 @@ public class Metodo implements Serializable {
 	private Integer qtdAic;
 	private Integer qtdFilter;
 	private Integer qtdMaps;
+	private Integer idClasse;
 	
 	@Transient private Integer linhaInicio;
 	@Transient private Integer linhaFim;
-	private Classe idClasse;
+	@Transient private String nomeClasse;
 	
-	public Classe getClasse() {
+	public Integer getIdMetodo() {
+		return idMetodo;
+	}
+	public void setIdMetodo(Integer idMetodo) {
+		this.idMetodo = idMetodo;
+	}
+	public String getNomeClasse() {
+		return nomeClasse;
+	}
+	public void setNomeClasse(String nomeClasse) {
+		this.nomeClasse = nomeClasse;
+	}
+	public Integer getIdClasse() {
 		return idClasse;
 	}
-	public void setClasse(Classe classe) {
+	public void setIdClasse(Integer idClasse) {
+		this.idClasse = idClasse;
+	}
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+	public Integer getClasse() {
+		return idClasse;
+	}
+	public void setClasse(Integer classe) {
 		this.idClasse = classe;
 	}
 	public Integer getLinhaInicio() {

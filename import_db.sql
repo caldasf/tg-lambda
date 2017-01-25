@@ -14,7 +14,7 @@ CREATE TABLE Versao
 (
 	idVersao int NOT NULL AUTO_INCREMENT,
 	idProjeto int NOT NULL,
-	nome VARCHAR(200),
+	numVersao VARCHAR(200),
 	PRIMARY KEY (idVersao),
 	FOREIGN KEY (idProjeto) REFERENCES Projeto(idProjeto)
 );
@@ -22,10 +22,10 @@ CREATE TABLE Versao
 CREATE TABLE Classe
 (
 	idClasse int NOT NULL AUTO_INCREMENT,
-	idProjeto int NOT NULL,
+	idVersao int NOT NULL,
 	nome VARCHAR(200),
 	PRIMARY KEY (idClasse),
-	FOREIGN KEY (idProjeto) REFERENCES Projeto(idProjeto)
+	FOREIGN KEY (idVersao) REFERENCES Versao(idVersao)
 );
 
 CREATE TABLE Metodo
