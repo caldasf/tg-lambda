@@ -15,8 +15,8 @@ public class Classe implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer idClasse;
-	@ManyToOne(cascade = CascadeType.ALL)
-	private Projeto idProjeto;
+	
+	private Integer idProjeto;
 	private String nome;
 	
 	public Integer getId() {
@@ -25,10 +25,10 @@ public class Classe implements Serializable {
 	public void setId(Integer id) {
 		this.idClasse = id;
 	}
-	public Projeto getProjeto() {
+	public Integer getProjeto() {
 		return idProjeto;
 	}
-	public void setProjeto(Projeto projeto) {
+	public void setProjeto(Integer projeto) {
 		this.idProjeto = projeto;
 	}
 	public String getNome() {

@@ -2,10 +2,12 @@ package entities;
 
 import java.io.Serializable;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Versao implements Serializable {
@@ -13,7 +15,7 @@ public class Versao implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer idVersao;
-	private Projeto idProjeto;
+	private Integer idProjeto;
 	private String numVersao;
 	
 	public Integer getId() {
@@ -22,10 +24,10 @@ public class Versao implements Serializable {
 	public void setId(Integer id) {
 		this.idVersao = id;
 	}
-	public Projeto getProjeto() {
+	public Integer getProjeto() {
 		return idProjeto;
 	}
-	public void setProjeto(Projeto projeto) {
+	public void setProjeto(Integer projeto) {
 		this.idProjeto = projeto;
 	}
 	public String getNumVersao() {

@@ -25,7 +25,6 @@ public class Metodo implements Serializable {
 	
 	@Transient private Integer linhaInicio;
 	@Transient private Integer linhaFim;
-	@ManyToOne(cascade = CascadeType.ALL)
 	private Classe idClasse;
 	
 	public Classe getClasse() {

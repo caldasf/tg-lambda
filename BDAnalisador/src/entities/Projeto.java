@@ -14,7 +14,7 @@ public class Projeto implements Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer idProjeto;
 	private String nome;
-	
+		 
 	public Integer getId() {
 		return idProjeto;
 	}
@@ -27,4 +27,5 @@ public class Projeto implements Serializable {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
+	
 }
