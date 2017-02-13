@@ -25,7 +25,7 @@ public class Controlador {
 	private DAOMetodo daoMetodo;
 	
 	public void popularMetodos() throws IOException {
-		BufferedReader br = lerArquivo("/home/les-07/TCC-Lambda/tg-lambda/guava/20.0/methodDeclaration.csv");
+		BufferedReader br = lerArquivo("/home/luna/Projects/static-analysis/output/methodDeclaration.csv");
 		String sCurrentLine;
 		String[] listaProjeto = null;
 		while ((sCurrentLine = br.readLine()) != null) {
@@ -63,7 +63,7 @@ public class Controlador {
 		daoMetodo = new DAOMetodo();
 		listaMetodos = new ArrayList<Metodo>();
 		
-		String inputCsv = "/home/les-02/TGLambda/static-analysis/input.csv";
+		String inputCsv = "/home/luna/Projects/static-analysis/input.csv";
 		FileReader fr = new FileReader(inputCsv);
 		BufferedReader br = new BufferedReader(fr);
 		try {
@@ -73,30 +73,42 @@ public class Controlador {
 		}
 		String sCurrentLine;
 		projeto.setNome("");
+		
+		//Executa para cada projeto
 		while ((sCurrentLine = br.readLine()) != null) {
 			String nomePasta = "";
 			
-			String array[] = sCurrentLine.split(";");
-			nomePasta += array[2] + "-" + array[3];			
+			String array[] = sCurrentLine.split(",");
+			nomePasta += array[2] + "-" + array[3];	
+			//Popular tabela de Projetos
 			if (!projeto.getNome().equals(array[2])) {
 				projeto.setNome(array[2]);
 				popularProjeto();
 			}
+			
+			//Versao
 			versao.setNumVersao(array[3]);
 			popularVersao();
+			
+			//Classes e Metodos
 			popularMetodos(nomePasta);
 			preencherMetodos(nomePasta);
 		}		
 	}
 
+	//Preencher metodos com todas as suas informacoes: qtd lambda expressions, for each, etc.
 	private void preencherMetodos(String nomePasta) throws IOException {
 		pesquisarLambdas(nomePasta);
-		// TODO O RESTO
+		pesquisarAIC(nomePasta);
+		pesquisarMapPattern(nomePasta);
+		pesquisarFilterPattern(nomePasta);
+		// Falta ForEach
 		daoMetodo.gravarMetodos(listaMetodos);
 	}
 
+	//Identifica quantidade de expressões lambda
 	private void pesquisarLambdas(String nomePasta) throws IOException {
-		String arquivoLambdas = "/home/les-02/TGLambda/static-analysis/output/" + nomePasta + "/lambdaExpression.csv";
+		String arquivoLambdas = "/home/luna/Projects/static-analysis/output/" + nomePasta + "/lambdaExpression.csv";
 		FileReader fr = new FileReader(arquivoLambdas);
 		BufferedReader br = new BufferedReader(fr);
 		try {
@@ -109,12 +121,114 @@ public class Controlador {
 			if (!sCurrentLine.startsWith("typeProject")) {
 				String array[] = sCurrentLine.split(";");
 				String nomeClasse = array[4].substring(array[4].lastIndexOf("/")+1).split("\\.")[0];
+				
 				Integer linhaInicio = new Integer(array[5]);
 				Integer linhaFim = new Integer(array[6]);
 				
+				
+				
 				for (Metodo met : listaMetodos) {
-					if (nomeClasse.equals(met.getNomeClasse()) && (linhaInicio >= met.getLinhaInicio() && linhaFim <= met.getLinhaFim())) {
+					
+					if (nomeClasse.equals(met.getNomeClasse()) && 
+						(linhaInicio >= met.getLinhaInicio() && linhaInicio <= met.getLinhaFim())) {
 						met.setQtdLambda(met.getQtdLambda() + 1);
+					}
+				}
+			}
+		}
+	}
+	
+	
+	//Identifica quantidade de AIC
+	private void pesquisarAIC(String nomePasta) throws IOException {
+		String arquivoAic = "/home/luna/Projects/static-analysis/output/" + nomePasta + "/aic.csv";
+		FileReader fr = new FileReader(arquivoAic);
+		BufferedReader br = new BufferedReader(fr);
+		try {
+			br = new BufferedReader(new FileReader(arquivoAic));
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		String sCurrentLine;
+		while ((sCurrentLine = br.readLine()) != null) {
+			if (!sCurrentLine.startsWith("typeProject")) {
+				String array[] = sCurrentLine.split(";");
+				String nomeClasse = array[4].substring(array[4].lastIndexOf("/")+1).split("\\.")[0];
+				
+				Integer linhaInicio = new Integer(array[5]);
+				Integer linhaFim = new Integer(array[6]);
+				
+				
+				
+				for (Metodo met : listaMetodos) {
+					
+					if (nomeClasse.equals(met.getNomeClasse()) && 
+						(linhaInicio >= met.getLinhaInicio() && linhaInicio <= met.getLinhaFim())) {
+						met.setQtdAic(met.getQtdAic() + 1);
+					}
+				}
+			}
+		}
+	}
+	
+	//Identifica quantidade de filters
+	private void pesquisarFilterPattern(String nomePasta) throws IOException {
+		String arquivoFilter = "/home/luna/Projects/static-analysis/output/" + nomePasta + "/filterPattern.csv";
+		FileReader fr = new FileReader(arquivoFilter);
+		BufferedReader br = new BufferedReader(fr);
+		try {
+			br = new BufferedReader(new FileReader(arquivoFilter));
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		String sCurrentLine;
+		while ((sCurrentLine = br.readLine()) != null) {
+			if (!sCurrentLine.startsWith("typeProject")) {
+				String array[] = sCurrentLine.split(";");
+				String nomeClasse = array[4].substring(array[4].lastIndexOf("/")+1).split("\\.")[0];
+				
+				Integer linhaInicio = new Integer(array[5]);
+				Integer linhaFim = new Integer(array[6]);
+				
+				
+				
+				for (Metodo met : listaMetodos) {
+					
+					if (nomeClasse.equals(met.getNomeClasse()) && 
+						(linhaInicio >= met.getLinhaInicio() && linhaInicio <= met.getLinhaFim())) {
+						met.setQtdFilter(met.getQtdFilter() + 1);
+					}
+				}
+			}
+		}
+	}
+
+	// Identificação de Map Patterns
+	private void pesquisarMapPattern(String nomePasta) throws IOException {
+		String arquivoMap = "/home/luna/Projects/static-analysis/output/" + nomePasta + "/mapPattern.csv";
+		FileReader fr = new FileReader(arquivoMap);
+		BufferedReader br = new BufferedReader(fr);
+		try {
+			br = new BufferedReader(new FileReader(arquivoMap));
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		String sCurrentLine;
+		while ((sCurrentLine = br.readLine()) != null) {
+			if (!sCurrentLine.startsWith("typeProject")) {
+				String array[] = sCurrentLine.split(";");
+				String nomeClasse = array[4].substring(array[4].lastIndexOf("/")+1).split("\\.")[0];
+				
+				Integer linhaInicio = new Integer(array[5]);
+				Integer linhaFim = new Integer(array[6]);
+				
+				
+				
+				for (Metodo met : listaMetodos) {
+					
+					if (nomeClasse.equals(met.getNomeClasse()) && 
+						(linhaInicio >= met.getLinhaInicio() && linhaInicio <= met.getLinhaFim())) {
+						met.setQtdMaps(met.getQtdMaps() + 1);
 					}
 				}
 			}
@@ -122,7 +236,7 @@ public class Controlador {
 	}
 
 	private void popularMetodos(String nomePasta) throws IOException {
-		String arquivoMetodos = "/home/les-02/TGLambda/static-analysis/output/" + nomePasta + "/methodDeclaration.csv";
+		String arquivoMetodos = "/home/luna/Projects/static-analysis/output/" + nomePasta + "/methodDeclaration.csv";
 		FileReader fr = new FileReader(arquivoMetodos);
 		BufferedReader br = new BufferedReader(fr);
 		try {
@@ -143,12 +257,12 @@ public class Controlador {
 					Classe classe = new Classe();
 					classe.setNome(nomeClasse);
 					classe.setVersao(versao.getId());
-//					idClasse = daoClasse.gravarClasse(classe);		
+					idClasse = daoClasse.gravarClasse(classe);		
 				}
 				nomeClasse = array[4].substring(array[4].lastIndexOf("/")+1).split("\\.")[0];
 				
 				metodo.setIdClasse(5);
-//				metodo.setIdClasse(idClasse);
+				metodo.setIdClasse(idClasse);
 				metodo.setNomeClasse(nomeClasse);
 				
 				metodo.setLinhaInicio(new Integer(array[5]));

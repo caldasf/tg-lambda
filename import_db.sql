@@ -1,5 +1,7 @@
 
-DROP TABLE IF EXISTS Projeto;
+DROP DATABASE IF EXISTS BDAnalisador;
+CREATE DATABASE BDAnalisador;
+USE BDAnalisador;
 
 CREATE TABLE Projeto
 (
@@ -15,8 +17,8 @@ CREATE TABLE Versao
 	idVersao int NOT NULL AUTO_INCREMENT,
 	idProjeto int NOT NULL,
 	numVersao VARCHAR(200),
-	PRIMARY KEY (idVersao),
-	FOREIGN KEY (idProjeto) REFERENCES Projeto(idProjeto)
+	PRIMARY KEY (idVersao)
+--	FOREIGN KEY (idProjeto) REFERENCES Projeto(idProjeto)
 );
 
 CREATE TABLE Classe
@@ -24,8 +26,8 @@ CREATE TABLE Classe
 	idClasse int NOT NULL AUTO_INCREMENT,
 	idVersao int NOT NULL,
 	nome VARCHAR(200),
-	PRIMARY KEY (idClasse),
-	FOREIGN KEY (idVersao) REFERENCES Versao(idVersao)
+	PRIMARY KEY (idClasse)
+--	FOREIGN KEY (idVersao) REFERENCES Versao(idVersao)
 );
 
 CREATE TABLE Metodo
@@ -38,6 +40,6 @@ CREATE TABLE Metodo
 	QtdAic int,
 	QtdFilter int,
 	QtdMaps int,
-	PRIMARY KEY (idMetodo),
-	FOREIGN KEY (idClasse) REFERENCES Classe(idClasse)
+	PRIMARY KEY (idMetodo)
+--	FOREIGN KEY (idClasse) REFERENCES Classe(idClasse)
 );
