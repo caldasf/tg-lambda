@@ -24,6 +24,7 @@ public class Controlador {
 	private DAOVersao daoVersao;
 	private DAOClasse daoClasse;
 	private DAOMetodo daoMetodo;
+	private String path = "/home/les-02/TGLambda/static-analysis/";
 	
 	public BufferedReader lerArquivo(String nomeArquivo) {
 		BufferedReader br = null;
@@ -50,15 +51,10 @@ public class Controlador {
 		daoMetodo = new DAOMetodo();
 		listaMetodos = new ArrayList<Metodo>();
 		listaClasses = new ArrayList<Classe>();
+
 		
-		String inputCsv = "/home/les-02/TGLambda/static-analysis/input.csv";
-		FileReader fr = new FileReader(inputCsv);
-		BufferedReader br = new BufferedReader(fr);
-		try {
-			br = new BufferedReader(new FileReader(inputCsv));
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+		String inputCsv = path + "input.csv";
+		BufferedReader br = lerArquivo(inputCsv);
 		String sCurrentLine;
 		projeto.setNome("");
 		
@@ -86,138 +82,49 @@ public class Controlador {
 
 	//Preencher metodos com todas as suas informacoes: qtd lambda expressions, for each, etc.
 	private void preencherMetodos(String nomePasta) throws IOException {
-		pesquisarLambdas(nomePasta);
-		pesquisarAIC(nomePasta);
-		pesquisarMapPattern(nomePasta);
-		pesquisarFilterPattern(nomePasta);
+		pesquisar(nomePasta, "lambdaExpression.csv", 1);
+		pesquisar(nomePasta, "aic.csv", 2);
+		pesquisar(nomePasta, "filterPattern.csv", 3);
+		pesquisar(nomePasta, "mapPattern.csv", 4);
 		// Falta ForEach
 		daoMetodo.gravarMetodos(listaMetodos);
 		daoClasse.gravarClasse(listaClasses);
 	}
+	
+	private void incrementar(Integer operacao, Metodo met) {
+		switch (operacao) {
+		case 1:
+			met.setQtdLambda(met.getQtdLambda() + 1);
+			break;
+		case 2:
+			met.setQtdAic(met.getQtdAic() + 1);
+			break;
+		case 3:
+			met.setQtdFilter(met.getQtdFilter() + 1);
+			break;
+		case 4:
+			met.setQtdMaps(met.getQtdMaps() + 1);
+			break;
+		}
+	}
+	
+	private void pesquisar(String nomePasta, String nomeArquivo, Integer operacao) throws IOException { 
+		String arquivo = path + "output/" + nomePasta + "/" + nomeArquivo;
+		BufferedReader br = lerArquivo(arquivo);
+		
+		String sCurrentLine;
+		while ((sCurrentLine = br.readLine()) != null) {
+			if (!sCurrentLine.startsWith("typeProject")) {
+				String array[] = sCurrentLine.split(";");
+				String nomeClasse = array[4].substring(array[4].lastIndexOf("/")+1).split("\\.")[0];
+				
+				Integer linhaInicio = new Integer(array[5]);
+				Integer linhaFim = new Integer(array[6]);
 
-	//Identifica quantidade de expressões lambda
-	private void pesquisarLambdas(String nomePasta) throws IOException {
-		String arquivoLambdas = "/home/les-02/TGLambda/static-analysis/output/" + nomePasta + "/lambdaExpression.csv";
-		FileReader fr = new FileReader(arquivoLambdas);
-		BufferedReader br = new BufferedReader(fr);
-		try {
-			br = new BufferedReader(new FileReader(arquivoLambdas));
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		String sCurrentLine;
-		while ((sCurrentLine = br.readLine()) != null) {
-			if (!sCurrentLine.startsWith("typeProject")) {
-				String array[] = sCurrentLine.split(";");
-				String nomeClasse = array[4].substring(array[4].lastIndexOf("/")+1).split("\\.")[0];
-				
-				Integer linhaInicio = new Integer(array[5]);
-				Integer linhaFim = new Integer(array[6]);
-				
-				
-				
 				for (Metodo met : listaMetodos) {
-					
 					if (nomeClasse.equals(met.getNomeClasse()) && 
 						(linhaInicio >= met.getLinhaInicio() && linhaFim <= met.getLinhaFim())) {
-						met.setQtdLambda(met.getQtdLambda() + 1);
-					}
-				}
-			}
-		}
-	}
-	
-	
-	//Identifica quantidade de AIC
-	private void pesquisarAIC(String nomePasta) throws IOException {
-		String arquivoAic = "/home/les-02/TGLambda/static-analysis/output/" + nomePasta + "/aic.csv";
-		FileReader fr = new FileReader(arquivoAic);
-		BufferedReader br = new BufferedReader(fr);
-		try {
-			br = new BufferedReader(new FileReader(arquivoAic));
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		String sCurrentLine;
-		while ((sCurrentLine = br.readLine()) != null) {
-			if (!sCurrentLine.startsWith("typeProject")) {
-				String array[] = sCurrentLine.split(";");
-				String nomeClasse = array[4].substring(array[4].lastIndexOf("/")+1).split("\\.")[0];
-				
-				Integer linhaInicio = new Integer(array[5]);
-				Integer linhaFim = new Integer(array[6]);
-				
-				
-				
-				for (Metodo met : listaMetodos) {
-					
-					if (nomeClasse.equals(met.getNomeClasse()) && 
-						(linhaInicio >= met.getLinhaInicio() && linhaFim <= met.getLinhaFim())) {
-						met.setQtdAic(met.getQtdAic() + 1);
-					}
-				}
-			}
-		}
-	}
-	
-	//Identifica quantidade de filters
-	private void pesquisarFilterPattern(String nomePasta) throws IOException {
-		String arquivoFilter = "/home/les-02/TGLambda/static-analysis/output/" + nomePasta + "/filterPattern.csv";
-		FileReader fr = new FileReader(arquivoFilter);
-		BufferedReader br = new BufferedReader(fr);
-		try {
-			br = new BufferedReader(new FileReader(arquivoFilter));
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		String sCurrentLine;
-		while ((sCurrentLine = br.readLine()) != null) {
-			if (!sCurrentLine.startsWith("typeProject")) {
-				String array[] = sCurrentLine.split(";");
-				String nomeClasse = array[4].substring(array[4].lastIndexOf("/")+1).split("\\.")[0];
-				
-				Integer linhaInicio = new Integer(array[5]);
-				Integer linhaFim = new Integer(array[6]);
-				
-				
-				
-				for (Metodo met : listaMetodos) {
-					
-					if (nomeClasse.equals(met.getNomeClasse()) && 
-						(linhaInicio >= met.getLinhaInicio() && linhaFim <= met.getLinhaFim())) {
-						met.setQtdFilter(met.getQtdFilter() + 1);
-					}
-				}
-			}
-		}
-	}
-
-	// Identificação de Map Patterns
-	private void pesquisarMapPattern(String nomePasta) throws IOException {
-		String arquivoMap = "/home/les-02/TGLambda/static-analysis/output/" + nomePasta + "/mapPattern.csv";
-		FileReader fr = new FileReader(arquivoMap);
-		BufferedReader br = new BufferedReader(fr);
-		try {
-			br = new BufferedReader(new FileReader(arquivoMap));
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		String sCurrentLine;
-		while ((sCurrentLine = br.readLine()) != null) {
-			if (!sCurrentLine.startsWith("typeProject")) {
-				String array[] = sCurrentLine.split(";");
-				String nomeClasse = array[4].substring(array[4].lastIndexOf("/")+1).split("\\.")[0];
-				
-				Integer linhaInicio = new Integer(array[5]);
-				Integer linhaFim = new Integer(array[6]);
-				
-				
-				
-				for (Metodo met : listaMetodos) {
-					
-					if (nomeClasse.equals(met.getNomeClasse()) && 
-						(linhaInicio >= met.getLinhaInicio() && linhaFim <= met.getLinhaFim())) {
-						met.setQtdMaps(met.getQtdMaps() + 1);
+						incrementar(operacao, met);
 					}
 				}
 			}
@@ -225,14 +132,9 @@ public class Controlador {
 	}
 
 	private void popularMetodos(String nomePasta) throws IOException {
-		String arquivoMetodos = "/home/les-02/TGLambda/static-analysis/output/" + nomePasta + "/methodDeclaration.csv";
-		FileReader fr = new FileReader(arquivoMetodos);
-		BufferedReader br = new BufferedReader(fr);
-		try {
-			br = new BufferedReader(new FileReader(arquivoMetodos));
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+		String arquivoMetodos = path + "output/" + nomePasta + "/methodDeclaration.csv";
+		BufferedReader br = lerArquivo(arquivoMetodos);
+		
 		String sCurrentLine;
 		String nomeClasse = "";
 		Integer idClasse = 0;
@@ -275,69 +177,5 @@ public class Controlador {
 
 	private void popularVersao() {
 		daoVersao.gravarVersao(versao);
-	}
-
-	public List<Metodo> getListaMetodos() {
-		return listaMetodos;
-	}
-
-	public void setListaMetodos(List<Metodo> listaMetodos) {
-		this.listaMetodos = listaMetodos;
-	}
-
-	public DAOProjeto getDaoProjeto() {
-		return daoProjeto;
-	}
-
-	public void setDaoProjeto(DAOProjeto daoProjeto) {
-		this.daoProjeto = daoProjeto;
-	}
-	
-	public Projeto getProjeto() {
-		return projeto;
-	}
-
-	public void setProjeto(Projeto projeto) {
-		this.projeto = projeto;
-	}
-
-	public Versao getVersao() {
-		return versao;
-	}
-
-	public void setVersao(Versao versao) {
-		this.versao = versao;
-	}
-
-	public DAOClasse getDaoClasse() {
-		return daoClasse;
-	}
-
-	public void setDaoClasse(DAOClasse daoClasse) {
-		this.daoClasse = daoClasse;
-	}
-
-	public DAOMetodo getDaoMetodo() {
-		return daoMetodo;
-	}
-
-	public void setDaoMetodo(DAOMetodo daoMetodo) {
-		this.daoMetodo = daoMetodo;
-	}
-
-	public List<Classe> getListaClasse() {
-		return listaClasses;
-	}
-
-	public void setListaClasse(List<Classe> listaClasses) {
-		this.listaClasses = listaClasses;
-	}
-
-	public DAOVersao getDaoVersao() {
-		return daoVersao;
-	}
-
-	public void setDaoVersao(DAOVersao daoVersao) {
-		this.daoVersao = daoVersao;
 	}
 }
