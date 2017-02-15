@@ -19,24 +19,11 @@ public class Controlador {
 	private Projeto projeto;
 	private Versao versao;
 	private List<Metodo> listaMetodos;
+	private List<Classe> listaClasses;
 	private DAOProjeto daoProjeto;
 	private DAOVersao daoVersao;
 	private DAOClasse daoClasse;
 	private DAOMetodo daoMetodo;
-	
-	public void popularMetodos() throws IOException {
-		BufferedReader br = lerArquivo("/home/luna/Projects/static-analysis/output/methodDeclaration.csv");
-		String sCurrentLine;
-		String[] listaProjeto = null;
-		while ((sCurrentLine = br.readLine()) != null) {
-			if (!sCurrentLine.startsWith("typeProject")) {
-				listaProjeto = sCurrentLine.split(";");
-				projeto.setNome(listaProjeto[2]);
-				versao.setNumVersao(listaProjeto[3]);
-				System.out.println(sCurrentLine);
-			}
-		}
-	}
 	
 	public BufferedReader lerArquivo(String nomeArquivo) {
 		BufferedReader br = null;
@@ -62,8 +49,9 @@ public class Controlador {
 		daoClasse = new DAOClasse();
 		daoMetodo = new DAOMetodo();
 		listaMetodos = new ArrayList<Metodo>();
+		listaClasses = new ArrayList<Classe>();
 		
-		String inputCsv = "/home/luna/Projects/static-analysis/input.csv";
+		String inputCsv = "/home/les-02/TGLambda/static-analysis/input.csv";
 		FileReader fr = new FileReader(inputCsv);
 		BufferedReader br = new BufferedReader(fr);
 		try {
@@ -78,7 +66,7 @@ public class Controlador {
 		while ((sCurrentLine = br.readLine()) != null) {
 			String nomePasta = "";
 			
-			String array[] = sCurrentLine.split(",");
+			String array[] = sCurrentLine.split(";");
 			nomePasta += array[2] + "-" + array[3];	
 			//Popular tabela de Projetos
 			if (!projeto.getNome().equals(array[2])) {
@@ -104,11 +92,12 @@ public class Controlador {
 		pesquisarFilterPattern(nomePasta);
 		// Falta ForEach
 		daoMetodo.gravarMetodos(listaMetodos);
+		daoClasse.gravarClasse(listaClasses);
 	}
 
 	//Identifica quantidade de expressões lambda
 	private void pesquisarLambdas(String nomePasta) throws IOException {
-		String arquivoLambdas = "/home/luna/Projects/static-analysis/output/" + nomePasta + "/lambdaExpression.csv";
+		String arquivoLambdas = "/home/les-02/TGLambda/static-analysis/output/" + nomePasta + "/lambdaExpression.csv";
 		FileReader fr = new FileReader(arquivoLambdas);
 		BufferedReader br = new BufferedReader(fr);
 		try {
@@ -130,7 +119,7 @@ public class Controlador {
 				for (Metodo met : listaMetodos) {
 					
 					if (nomeClasse.equals(met.getNomeClasse()) && 
-						(linhaInicio >= met.getLinhaInicio() && linhaInicio <= met.getLinhaFim())) {
+						(linhaInicio >= met.getLinhaInicio() && linhaFim <= met.getLinhaFim())) {
 						met.setQtdLambda(met.getQtdLambda() + 1);
 					}
 				}
@@ -141,7 +130,7 @@ public class Controlador {
 	
 	//Identifica quantidade de AIC
 	private void pesquisarAIC(String nomePasta) throws IOException {
-		String arquivoAic = "/home/luna/Projects/static-analysis/output/" + nomePasta + "/aic.csv";
+		String arquivoAic = "/home/les-02/TGLambda/static-analysis/output/" + nomePasta + "/aic.csv";
 		FileReader fr = new FileReader(arquivoAic);
 		BufferedReader br = new BufferedReader(fr);
 		try {
@@ -163,7 +152,7 @@ public class Controlador {
 				for (Metodo met : listaMetodos) {
 					
 					if (nomeClasse.equals(met.getNomeClasse()) && 
-						(linhaInicio >= met.getLinhaInicio() && linhaInicio <= met.getLinhaFim())) {
+						(linhaInicio >= met.getLinhaInicio() && linhaFim <= met.getLinhaFim())) {
 						met.setQtdAic(met.getQtdAic() + 1);
 					}
 				}
@@ -173,7 +162,7 @@ public class Controlador {
 	
 	//Identifica quantidade de filters
 	private void pesquisarFilterPattern(String nomePasta) throws IOException {
-		String arquivoFilter = "/home/luna/Projects/static-analysis/output/" + nomePasta + "/filterPattern.csv";
+		String arquivoFilter = "/home/les-02/TGLambda/static-analysis/output/" + nomePasta + "/filterPattern.csv";
 		FileReader fr = new FileReader(arquivoFilter);
 		BufferedReader br = new BufferedReader(fr);
 		try {
@@ -195,7 +184,7 @@ public class Controlador {
 				for (Metodo met : listaMetodos) {
 					
 					if (nomeClasse.equals(met.getNomeClasse()) && 
-						(linhaInicio >= met.getLinhaInicio() && linhaInicio <= met.getLinhaFim())) {
+						(linhaInicio >= met.getLinhaInicio() && linhaFim <= met.getLinhaFim())) {
 						met.setQtdFilter(met.getQtdFilter() + 1);
 					}
 				}
@@ -205,7 +194,7 @@ public class Controlador {
 
 	// Identificação de Map Patterns
 	private void pesquisarMapPattern(String nomePasta) throws IOException {
-		String arquivoMap = "/home/luna/Projects/static-analysis/output/" + nomePasta + "/mapPattern.csv";
+		String arquivoMap = "/home/les-02/TGLambda/static-analysis/output/" + nomePasta + "/mapPattern.csv";
 		FileReader fr = new FileReader(arquivoMap);
 		BufferedReader br = new BufferedReader(fr);
 		try {
@@ -227,7 +216,7 @@ public class Controlador {
 				for (Metodo met : listaMetodos) {
 					
 					if (nomeClasse.equals(met.getNomeClasse()) && 
-						(linhaInicio >= met.getLinhaInicio() && linhaInicio <= met.getLinhaFim())) {
+						(linhaInicio >= met.getLinhaInicio() && linhaFim <= met.getLinhaFim())) {
 						met.setQtdMaps(met.getQtdMaps() + 1);
 					}
 				}
@@ -236,7 +225,7 @@ public class Controlador {
 	}
 
 	private void popularMetodos(String nomePasta) throws IOException {
-		String arquivoMetodos = "/home/luna/Projects/static-analysis/output/" + nomePasta + "/methodDeclaration.csv";
+		String arquivoMetodos = "/home/les-02/TGLambda/static-analysis/output/" + nomePasta + "/methodDeclaration.csv";
 		FileReader fr = new FileReader(arquivoMetodos);
 		BufferedReader br = new BufferedReader(fr);
 		try {
@@ -255,13 +244,14 @@ public class Controlador {
 				
 				if (!nomeClasse.equals(array[4].substring(array[4].lastIndexOf("/")+1).split("\\.")[0])) {
 					Classe classe = new Classe();
-					classe.setNome(nomeClasse);
+					classe.setNome(array[4].substring(array[4].lastIndexOf("/")+1).split("\\.")[0]);
 					classe.setVersao(versao.getId());
-					idClasse = daoClasse.gravarClasse(classe);		
+					idClasse += 1;
+					listaClasses.add(classe);
+//					idClasse = daoClasse.gravarClasse(classe);
 				}
 				nomeClasse = array[4].substring(array[4].lastIndexOf("/")+1).split("\\.")[0];
 				
-				metodo.setIdClasse(5);
 				metodo.setIdClasse(idClasse);
 				metodo.setNomeClasse(nomeClasse);
 				
@@ -333,5 +323,21 @@ public class Controlador {
 
 	public void setDaoMetodo(DAOMetodo daoMetodo) {
 		this.daoMetodo = daoMetodo;
+	}
+
+	public List<Classe> getListaClasse() {
+		return listaClasses;
+	}
+
+	public void setListaClasse(List<Classe> listaClasses) {
+		this.listaClasses = listaClasses;
+	}
+
+	public DAOVersao getDaoVersao() {
+		return daoVersao;
+	}
+
+	public void setDaoVersao(DAOVersao daoVersao) {
+		this.daoVersao = daoVersao;
 	}
 }
