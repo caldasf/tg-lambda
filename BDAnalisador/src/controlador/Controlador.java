@@ -24,7 +24,7 @@ public class Controlador {
 	private DAOVersao daoVersao;
 	private DAOClasse daoClasse;
 	private DAOMetodo daoMetodo;
-	private String path = "/home/les-02/TGLambda/static-analysis/";
+	private String path = "/home/luna/Projects/static-analysis/";
 	
 	public BufferedReader lerArquivo(String nomeArquivo) {
 		BufferedReader br = null;
@@ -61,7 +61,6 @@ public class Controlador {
 		//Executa para cada projeto
 		while ((sCurrentLine = br.readLine()) != null) {
 			String nomePasta = "";
-			
 			String array[] = sCurrentLine.split(";");
 			nomePasta += array[2] + "-" + array[3];	
 			//Popular tabela de Projetos
@@ -77,6 +76,8 @@ public class Controlador {
 			//Classes e Metodos
 			popularMetodos(nomePasta);
 			preencherMetodos(nomePasta);
+			
+			reset();
 		}		
 	}
 
@@ -169,7 +170,18 @@ public class Controlador {
 			}
 		}
 	}
-
+	
+	private void reset() {
+		versao.setId(0);
+		versao.setNumVersao("");
+		versao.setProjeto(0);
+		projeto.setId(0);
+		projeto.setNome("");
+		//rever esses dois
+		listaMetodos.clear();
+		listaClasses.clear();
+	}
+	
 	private void popularProjeto() {
 		Integer id = daoProjeto.gravarProjeto(projeto);
 		versao.setProjeto(id);
@@ -178,4 +190,5 @@ public class Controlador {
 	private void popularVersao() {
 		daoVersao.gravarVersao(versao);
 	}
+
 }
