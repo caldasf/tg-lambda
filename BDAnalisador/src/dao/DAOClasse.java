@@ -15,11 +15,6 @@ public class DAOClasse {
 		
 		manager.getTransaction().begin();
 		
-		//rever essa parte
-		if (listaClasses != null) {
-			listaClasses = manager.merge(listaClasses);
-		}
-		
 		for (Classe classe : listaClasses) {
 			manager.persist(classe);
 		}

@@ -1,0 +1,5 @@
+RxJava,38243,21789,3819,git://github.com/ReactiveX/RxJava.git,RxJava – Reactive Extensions for the JVM – a library for composing asynchronous and event-based programs using observable sequences for the Java VM.
+elasticsearch,329127,21061,7275,git://github.com/elastic/elasticsearch.git,Open Source, Distributed, RESTful Search Engine
+retrofit,4350,19218,3972,git://github.com/square/retrofit.git,Type-safe HTTP client for Android and Java by Square, Inc.
+okhttp,15773,17820,4518,git://github.com/square/okhttp.git,An HTTP+HTTP/2 client for Android and Java applications.
+java-design-patterns,14597,17234,5807,git://github.com/iluwatar/java-design-patterns.git,Design patterns implemented in Java

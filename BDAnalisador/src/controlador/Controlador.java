@@ -24,7 +24,7 @@ public class Controlador {
 	private DAOVersao daoVersao;
 	private DAOClasse daoClasse;
 	private DAOMetodo daoMetodo;
-	private String path = "/home/luna/Projects/static-analysis/";
+	private String path = "/home/luna/workspace/static-analysis/";
 	
 	public BufferedReader lerArquivo(String nomeArquivo) {
 		BufferedReader br = null;
@@ -88,8 +88,8 @@ public class Controlador {
 		pesquisar(nomePasta, "filterPattern.csv", 3);
 		pesquisar(nomePasta, "mapPattern.csv", 4);
 		// Falta ForEach
-		daoMetodo.gravarMetodos(listaMetodos);
 		daoClasse.gravarClasse(listaClasses);
+		daoMetodo.gravarMetodos(listaMetodos);
 	}
 	
 	private void incrementar(Integer operacao, Metodo met) {
@@ -172,12 +172,10 @@ public class Controlador {
 	}
 	
 	private void reset() {
-		versao.setId(0);
-		versao.setNumVersao("");
-		versao.setProjeto(0);
-		projeto.setId(0);
+		projeto = new Projeto();
 		projeto.setNome("");
-		//rever esses dois
+		versao = new Versao();
+		versao.setNumVersao("");
 		listaMetodos.clear();
 		listaClasses.clear();
 	}

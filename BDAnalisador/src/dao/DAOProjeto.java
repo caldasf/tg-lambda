@@ -13,9 +13,10 @@ public class DAOProjeto {
 		EntityManager manager = factory.createEntityManager();
 		
 		manager.getTransaction().begin();
-		if (projeto.getId()!= null) {
-			projeto = manager.merge(projeto);
-		}
+		
+//		if (projeto.getId()!= null) {
+//			projeto = manager.merge(projeto);
+//		}
 		manager.persist(projeto);
 		manager.getTransaction().commit();
 		

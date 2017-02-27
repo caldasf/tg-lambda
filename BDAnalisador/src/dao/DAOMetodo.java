@@ -15,9 +15,6 @@ public class DAOMetodo {
 		
 		manager.getTransaction().begin();
 		//rever essa parte
-		if (listaMetodos != null) {
-			listaMetodos = manager.merge(listaMetodos);
-		}
 		
 		for (Metodo met : listaMetodos) {
 			manager.persist(met);

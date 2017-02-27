@@ -13,9 +13,9 @@ public class DAOVersao {
 		EntityManager manager = factory.createEntityManager();
 		
 		manager.getTransaction().begin();
-		if (versao.getId()!= null) {
-			versao = manager.merge(versao);
-		}
+//		if (versao.getId()!= null) {
+//			versao = manager.merge(versao);
+//		}
 		manager.persist(versao);
 		manager.getTransaction().commit();
 		
