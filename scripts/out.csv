@@ -1,6 +1,6 @@
 Project;Total Lines; QtdLambda;Lambda Density;qtdAic;Aic Density;qtdFilter;Filter Density; qtdMaps; Maps Density
-leakcanary;3954;1086;0;4062;0;14;0;82;0;
-RxJava;233524;44828;11;141544;35;54;0;2660;0;
+leakcanary;3954;718;0;3970;0;14;0;74;0;
+RxJava;233524;26524;6;137972;34;54;0;2444;0;
 Android-Universal-Image-Loader;7218;1016;0;164;0;0;0;64;0;
 retrofit;16928;4850;0;1716;0;4;0;130;0;
 MPAndroidChart;24702;2120;0;1096;0;0;0;100;0;

@@ -1,5 +1,5 @@
 #!/usr/bin/python
-
+from __future__ import division
 
 import MySQLdb
 import datetime
@@ -65,10 +65,10 @@ try:
  			counting_totals[3] += row[6]
 
  		#aic bug
- 		counting_totals[1] = counting_totals[1]/2
-
+ 		counting_totals[1] = counting_totals[1]/2.0
+ 		print value
  		#calc Density
- 		counting_density[0] = counting_totals[0]/float(value);
+ 		counting_density[0] = (counting_totals[0]/float(value));
  		counting_density[1] = counting_totals[1]/float(value);
  		counting_density[2] = counting_totals[2]/float(value);
  		counting_density[3] = counting_totals[3]/float(value);
