@@ -1,8 +1,7 @@
-#BD Analisador
-##Objetivo
+# BD Analisador
+## Objetivo
 
-##How to
-- python create_input.py
-- mudar 'static-analysis/src/main/java/br/unb/cic/sa/model/CSVData.java'  com 'CSVData.java' nesta pasta aqui
-- rode static-analysis (passando o arquivo de input gerado com o codigo python)
-- rode BDAnalisador
+## How to
+- Download de projetos e criar input file: CreateInput.py
+- Mudar versões e rodar static-analysis para cada uma delas: VersionControl.py 
+- Rodar BDAnalisador para cada input file (falta automatizar)
