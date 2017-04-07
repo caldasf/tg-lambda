@@ -1,0 +1,7 @@
+typeProject;before;project;version;file;start;end;
+;;androidannotations;1;/home/les-02/NovoTGLambda/projects/androidannotations/AndroidAnnotations/androidannotations-core/androidannotations/src/main/java/org/androidannotations/internal/core/handler/TraceHandler.java;108;117;
+;;androidannotations;1;/home/les-02/NovoTGLambda/projects/androidannotations/AndroidAnnotations/androidannotations-core/androidannotations/src/main/java/org/androidannotations/internal/core/handler/TransactionalHandler.java;89;97;
+;;androidannotations;1;/home/les-02/NovoTGLambda/projects/androidannotations/AndroidAnnotations/androidannotations-core/androidannotations/src/main/java/org/androidannotations/internal/core/handler/FragmentByTagHandler.java;44;46;
+;;androidannotations;1;/home/les-02/NovoTGLambda/projects/androidannotations/AndroidAnnotations/androidannotations-core/androidannotations/src/main/java/org/androidannotations/helper/BundleHelper.java;214;224;
+;;androidannotations;1;/home/les-02/NovoTGLambda/projects/androidannotations/AndroidAnnotations/androidannotations-core/androidannotations/src/main/java/org/androidannotations/helper/APTCodeModelHelper.java;377;381;
+;;androidannotations;1;/home/les-02/NovoTGLambda/projects/androidannotations/AndroidAnnotations/androidannotations-core/androidannotations-testutils/src/main/java/org/androidannotations/testutils/ClassFinder.java;204;206;

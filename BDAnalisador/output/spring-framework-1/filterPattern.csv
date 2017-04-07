@@ -1,0 +1,13 @@
+typeProject;before;project;version;file;start;end;stmts;
+;;spring-framework;1;/home/les-02/NovoTGLambda/projects/spring-framework/spring-aop/src/main/java/org/springframework/aop/framework/adapter/DefaultAdvisorAdapterRegistry.java;85;89;0;
+;;spring-framework;1;/home/les-02/NovoTGLambda/projects/spring-framework/spring-webmvc/src/main/java/org/springframework/web/servlet/handler/BeanNameUrlHandlerMapping.java;63;67;0;
+;;spring-framework;1;/home/les-02/NovoTGLambda/projects/spring-framework/spring-webmvc/src/main/java/org/springframework/web/servlet/support/AbstractFlashMapManager.java;135;139;0;
+;;spring-framework;1;/home/les-02/NovoTGLambda/projects/spring-framework/spring-webmvc/src/main/java/org/springframework/web/servlet/view/groovy/GroovyMarkupConfigurer.java;168;172;0;
+;;spring-framework;1;/home/les-02/NovoTGLambda/projects/spring-framework/spring-messaging/src/main/java/org/springframework/messaging/handler/invocation/AbstractExceptionHandlerMethodResolver.java;119;123;0;
+;;spring-framework;1;/home/les-02/NovoTGLambda/projects/spring-framework/spring-core/src/main/java/org/springframework/core/type/classreading/AnnotationMetadataReadingVisitor.java;172;176;0;
+;;spring-framework;1;/home/les-02/NovoTGLambda/projects/spring-framework/spring-core/src/main/java/org/springframework/core/Constants.java;163;167;0;
+;;spring-framework;1;/home/les-02/NovoTGLambda/projects/spring-framework/spring-core/src/main/java/org/springframework/core/Constants.java;195;199;0;
+;;spring-framework;1;/home/les-02/NovoTGLambda/projects/spring-framework/spring-core/src/main/java/org/springframework/core/Constants.java;217;221;0;
+;;spring-framework;1;/home/les-02/NovoTGLambda/projects/spring-framework/spring-core/src/main/java/org/springframework/core/Constants.java;249;253;0;
+;;spring-framework;1;/home/les-02/NovoTGLambda/projects/spring-framework/spring-web/src/main/java/org/springframework/web/method/annotation/ExceptionHandlerMethodResolver.java;169;173;0;
+;;spring-framework;1;/home/les-02/NovoTGLambda/projects/spring-framework/spring-web/src/main/java/org/springframework/web/method/annotation/ModelFactory.java;291;295;0;

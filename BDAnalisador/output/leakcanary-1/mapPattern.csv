@@ -1,0 +1,13 @@
+typeProject;before;project;version;file;start;end;stmts;
+;;leakcanary;1;/home/les-02/TGLambda/projetos/leakcanary/leakcanary-analyzer/src/main/java/com/squareup/leakcanary/HeapAnalyzer.java;349;351;1;
+;;leakcanary;1;/home/les-02/TGLambda/projetos/leakcanary/leakcanary-analyzer/src/main/java/com/squareup/leakcanary/HeapAnalyzer.java;353;355;1;
+;;leakcanary;1;/home/les-02/TGLambda/projetos/leakcanary/leakcanary-analyzer/src/test/java/com/squareup/leakcanary/HeapAnalyzerTest.java;45;47;1;
+;;leakcanary;1;/home/les-02/NovoTGLambda/projetos/leakcanary/leakcanary-analyzer/src/main/java/com/squareup/leakcanary/HeapAnalyzer.java;349;351;1;
+;;leakcanary;1;/home/les-02/NovoTGLambda/projetos/leakcanary/leakcanary-analyzer/src/main/java/com/squareup/leakcanary/HeapAnalyzer.java;353;355;1;
+;;leakcanary;1;/home/les-02/NovoTGLambda/projetos/leakcanary/leakcanary-analyzer/src/test/java/com/squareup/leakcanary/HeapAnalyzerTest.java;45;47;1;
+;;leakcanary;1;/home/les-02/NovoTGLambda/projetos/leakcanary/leakcanary-analyzer/src/main/java/com/squareup/leakcanary/HeapAnalyzer.java;349;351;1;
+;;leakcanary;1;/home/les-02/NovoTGLambda/projetos/leakcanary/leakcanary-analyzer/src/main/java/com/squareup/leakcanary/HeapAnalyzer.java;353;355;1;
+;;leakcanary;1;/home/les-02/NovoTGLambda/projetos/leakcanary/leakcanary-analyzer/src/test/java/com/squareup/leakcanary/HeapAnalyzerTest.java;45;47;1;
+;;leakcanary;1;/home/les-02/NovoTGLambda/projects/leakcanary/leakcanary-analyzer/src/main/java/com/squareup/leakcanary/HeapAnalyzer.java;349;351;1;
+;;leakcanary;1;/home/les-02/NovoTGLambda/projects/leakcanary/leakcanary-analyzer/src/main/java/com/squareup/leakcanary/HeapAnalyzer.java;353;355;1;
+;;leakcanary;1;/home/les-02/NovoTGLambda/projects/leakcanary/leakcanary-analyzer/src/test/java/com/squareup/leakcanary/HeapAnalyzerTest.java;45;47;1;

@@ -1,0 +1,5 @@
+typeProject;before;project;version;file;start;end;stmts;
+;;fresco;1;/home/les-02/NovoTGLambda/projects/fresco/fbcore/src/main/java/com/facebook/common/references/CloseableReference.java;200;202;1;
+;;fresco;1;/home/les-02/NovoTGLambda/projects/fresco/imagepipeline-base/src/test/java/com/facebook/cache/disk/DefaultDiskStorageTest.java;623;625;1;
+;;fresco;1;/home/les-02/NovoTGLambda/projects/fresco/imagepipeline/src/main/java/com/facebook/imagepipeline/datasource/ListDataSource.java;67;69;1;
+;;fresco;1;/home/les-02/NovoTGLambda/projects/fresco/imagepipeline/src/main/java/com/facebook/imagepipeline/memory/BitmapCounter.java;136;138;1;

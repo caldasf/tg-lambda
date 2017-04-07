@@ -1,0 +1,12 @@
+typeProject;before;project;version;file;start;end;
+;;androidannotations;1;/home/les-02/NovoTGLambda/projects/androidannotations/AndroidAnnotations/androidannotations-core/androidannotations/src/main/java/org/androidannotations/internal/core/model/AndroidRes.java;41;16;
+;;androidannotations;1;/home/les-02/NovoTGLambda/projects/androidannotations/AndroidAnnotations/androidannotations-core/androidannotations/src/main/java/org/androidannotations/logger/Level.java;18;-1;
+;;androidannotations;1;/home/les-02/NovoTGLambda/projects/androidannotations/AndroidAnnotations/androidannotations-core/androidannotations/src/main/java/org/androidannotations/helper/IdValidatorHelper.java;36;-1;
+;;androidannotations;1;/home/les-02/NovoTGLambda/projects/androidannotations/AndroidAnnotations/androidannotations-core/androidannotations/src/main/java/org/androidannotations/rclass/IRClass.java;22;-1;
+;;androidannotations;1;/home/les-02/NovoTGLambda/projects/androidannotations/AndroidAnnotations/androidannotations-core/androidannotations-api/src/main/java/org/androidannotations/annotations/IgnoreWhen.java;83;-1;
+;;androidannotations;1;/home/les-02/NovoTGLambda/projects/androidannotations/AndroidAnnotations/androidannotations-core/androidannotations-api/src/main/java/org/androidannotations/annotations/Receiver.java;128;-1;
+;;androidannotations;1;/home/les-02/NovoTGLambda/projects/androidannotations/AndroidAnnotations/androidannotations-core/androidannotations-api/src/main/java/org/androidannotations/annotations/UiThread.java;149;-1;
+;;androidannotations;1;/home/les-02/NovoTGLambda/projects/androidannotations/AndroidAnnotations/androidannotations-core/androidannotations-api/src/main/java/org/androidannotations/annotations/WakeLock.java;89;-1;
+;;androidannotations;1;/home/les-02/NovoTGLambda/projects/androidannotations/AndroidAnnotations/androidannotations-core/androidannotations-api/src/main/java/org/androidannotations/annotations/WakeLock.java;115;-1;
+;;androidannotations;1;/home/les-02/NovoTGLambda/projects/androidannotations/AndroidAnnotations/androidannotations-core/androidannotations-api/src/main/java/org/androidannotations/annotations/sharedpreferences/SharedPref.java;75;-1;
+;;androidannotations;1;/home/les-02/NovoTGLambda/projects/androidannotations/AndroidAnnotations/androidannotations-core/androidannotations-api/src/main/java/org/androidannotations/annotations/EBean.java;99;-1;

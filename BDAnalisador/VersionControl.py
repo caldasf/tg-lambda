@@ -13,13 +13,13 @@ import CreateInput
 fname = '/home/luna/workspace/static-analysis/input.csv';
 
 #preference folder where will save new inputs for static-analysis
-inputs_location = '/home/luna/TG/tg-lambda/scripts/inputs/';
+inputs_location = '/home/les-02/TGLambda/tg-lambda/BDAnalisador/inputs/';
 
 #directory where all projects are
-projects_dir = '/home/luna/TG/java-projects/'
+projects_dir = '/home/les-02/TGLambda/tg-lambda/BDAnalisador/java-projects/'
 
 #jat with static analysis
-static_jar = '/home/luna/TG/tg-lambda/BDAnalisador/static2.jar'
+static_jar = '/home/les-02/TGLambda/tg-lambda/BDAnalisador/static2.jar'
 
 ############################################################################
 

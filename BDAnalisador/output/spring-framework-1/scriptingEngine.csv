@@ -1,0 +1,13 @@
+typeProject;before;project;version;file;start;end;method;
+;;spring-framework;1;/home/les-02/NovoTGLambda/projects/spring-framework/spring-context/src/main/java/org/springframework/scripting/support/StandardScriptFactory.java;186;186;eval;
+;;spring-framework;1;/home/les-02/NovoTGLambda/projects/spring-framework/spring-context/src/main/java/org/springframework/scripting/support/StandardScriptEvaluator.java;128;128;eval;
+;;spring-framework;1;/home/les-02/NovoTGLambda/projects/spring-framework/spring-context/src/main/java/org/springframework/scripting/support/StandardScriptEvaluator.java;132;132;eval;
+;;spring-framework;1;/home/les-02/NovoTGLambda/projects/spring-framework/spring-context/src/main/java/org/springframework/scripting/support/StandardScriptUtils.java;49;49;getEngineByName;
+;;spring-framework;1;/home/les-02/NovoTGLambda/projects/spring-framework/spring-context/src/main/java/org/springframework/scripting/bsh/BshScriptUtils.java;120;120;eval;
+;;spring-framework;1;/home/les-02/NovoTGLambda/projects/spring-framework/spring-context/src/main/java/org/springframework/scripting/bsh/BshScriptUtils.java;153;153;eval;
+;;spring-framework;1;/home/les-02/NovoTGLambda/projects/spring-framework/spring-context/src/main/java/org/springframework/scripting/bsh/BshScriptUtils.java;161;161;eval;
+;;spring-framework;1;/home/les-02/NovoTGLambda/projects/spring-framework/spring-context/src/main/java/org/springframework/scripting/bsh/BshScriptEvaluator.java;79;79;eval;
+;;spring-framework;1;/home/les-02/NovoTGLambda/projects/spring-framework/spring-webmvc/src/main/java/org/springframework/web/servlet/view/script/ScriptTemplateView.java;305;305;eval;
+;;spring-framework;1;/home/les-02/NovoTGLambda/projects/spring-framework/spring-webmvc/src/main/java/org/springframework/web/servlet/view/script/ScriptTemplateView.java;371;371;eval;
+;;spring-framework;1;/home/les-02/NovoTGLambda/projects/spring-framework/spring-webflux/src/main/java/org/springframework/web/reactive/result/view/script/ScriptTemplateView.java;252;252;eval;
+;;spring-framework;1;/home/les-02/NovoTGLambda/projects/spring-framework/spring-webflux/src/main/java/org/springframework/web/reactive/result/view/script/ScriptTemplateView.java;309;309;eval;

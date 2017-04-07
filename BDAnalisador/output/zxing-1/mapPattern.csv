@@ -1,0 +1,8 @@
+typeProject;before;project;version;file;start;end;stmts;
+;;zxing;1;/home/les-02/NovoTGLambda/projects/zxing/core/src/test/java/com/google/zxing/common/AbstractBlackBoxTestCase.java;117;119;1;
+;;zxing;1;/home/les-02/NovoTGLambda/projects/zxing/android/src/com/google/zxing/client/android/history/HistoryActivity.java;72;74;1;
+;;zxing;1;/home/les-02/NovoTGLambda/projects/zxing/android/src/com/google/zxing/client/android/DecodeFormatManager.java;91;93;1;
+;;zxing;1;/home/les-02/NovoTGLambda/projects/zxing/javase/src/main/java/com/google/zxing/client/j2se/DecodeWorker.java;113;115;1;
+;;zxing;1;/home/les-02/NovoTGLambda/projects/zxing/javase/src/main/java/com/google/zxing/client/j2se/CommandLineRunner.java;114;116;1;
+;;zxing;1;/home/les-02/NovoTGLambda/projects/zxing/javase/src/main/java/com/google/zxing/HtmlAssetTranslator.java;99;101;1;
+;;zxing;1;/home/les-02/NovoTGLambda/projects/zxing/javase/src/main/java/com/google/zxing/HtmlAssetTranslator.java;115;117;1;

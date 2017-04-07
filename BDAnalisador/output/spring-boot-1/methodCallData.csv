@@ -1,0 +1,8 @@
+typeProject;before;project;version;file;name;type;start;end;
+;;spring-boot;1;/home/les-02/NovoTGLambda/projects/spring-boot/spring-boot-tools/spring-boot-gradle-plugin/src/main/java/org/springframework/boot/gradle/plugin/UnresolvedDependenciesAnalyzer.java;stream;-;44;44;
+;;spring-boot;1;/home/les-02/NovoTGLambda/projects/spring-boot/spring-boot-tools/spring-boot-gradle-plugin/src/main/java/org/springframework/boot/gradle/plugin/UnresolvedDependenciesAnalyzer.java;stream;-;55;55;
+;;spring-boot;1;/home/les-02/NovoTGLambda/projects/spring-boot/spring-boot-tools/spring-boot-gradle-plugin/src/main/java/org/springframework/boot/gradle/plugin/MainClassConvention.java;stream;-;57;57;
+;;spring-boot;1;/home/les-02/NovoTGLambda/projects/spring-boot/spring-boot-tools/spring-boot-gradle-plugin/src/main/java/org/springframework/boot/gradle/tasks/bundling/BootArchiveSupport.java;stream;-;145;145;
+;;spring-boot;1;/home/les-02/NovoTGLambda/projects/spring-boot/spring-boot/src/main/java/org/springframework/boot/env/OriginTrackedYamlLoader.java;stream;-;104;104;
+;;spring-boot;1;/home/les-02/NovoTGLambda/projects/spring-boot/spring-boot-autoconfigure/src/main/java/org/springframework/boot/autoconfigure/web/reactive/HttpHandlerAutoConfiguration.java;stream;-;114;114;
+;;spring-boot;1;/home/les-02/NovoTGLambda/projects/spring-boot/spring-boot-autoconfigure/src/main/java/org/springframework/boot/autoconfigure/web/reactive/WebFluxAnnotationAutoConfiguration.java;stream;-;121;121;

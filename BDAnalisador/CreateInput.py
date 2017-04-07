@@ -185,7 +185,8 @@ def createInput(slocFile, dirProjects):
 
 def main():
 
-	listProjects = listRepositories()
+	#listProjects = listRepositories()
+	listProjects = "/home/les-02/TGLambda/tg-lambda/BDAnalisador/java.projects"
 	dirProjects = cloneRepo(listProjects)
 	#dirProjects = '/home/luna/TG/tg-lambda/projects/'
 	slocFile = countLinesProjects(dirProjects, sumFile)
@@ -194,4 +195,4 @@ def main():
 
 ###############################################
 
-#main()
+main()

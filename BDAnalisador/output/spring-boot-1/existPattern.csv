@@ -1,0 +1,16 @@
+typeProject;before;project;version;file;start;end;stmts;
+;;spring-boot;1;/home/les-02/NovoTGLambda/projects/spring-boot/spring-boot-devtools/src/main/java/org/springframework/boot/devtools/autoconfigure/DevToolsDataSourceAutoConfiguration.java;105;109;0;
+;;spring-boot;1;/home/les-02/NovoTGLambda/projects/spring-boot/spring-boot/src/main/java/org/springframework/boot/web/embedded/undertow/UndertowServletWebServer.java;396;401;0;
+;;spring-boot;1;/home/les-02/NovoTGLambda/projects/spring-boot/spring-boot/src/main/java/org/springframework/boot/logging/log4j2/ColorConverter.java;110;114;0;
+;;spring-boot;1;/home/les-02/NovoTGLambda/projects/spring-boot/spring-boot/src/main/java/org/springframework/boot/context/config/ConfigFileApplicationListener.java;544;548;0;
+;;spring-boot;1;/home/les-02/NovoTGLambda/projects/spring-boot/spring-boot/src/main/java/org/springframework/boot/context/properties/ConfigurationPropertiesBindingPostProcessor.java;449;453;0;
+;;spring-boot;1;/home/les-02/NovoTGLambda/projects/spring-boot/spring-boot/src/main/java/org/springframework/boot/context/logging/LoggingApplicationListener.java;152;156;0;
+;;spring-boot;1;/home/les-02/NovoTGLambda/projects/spring-boot/spring-boot/src/main/java/org/springframework/boot/context/TypeExcludeFilter.java;66;70;0;
+;;spring-boot;1;/home/les-02/NovoTGLambda/projects/spring-boot/spring-boot-autoconfigure/src/main/java/org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration.java;223;227;0;
+;;spring-boot;1;/home/les-02/NovoTGLambda/projects/spring-boot/spring-boot-autoconfigure/src/main/java/org/springframework/boot/autoconfigure/diagnostics/analyzer/NoSuchBeanDefinitionFailureAnalyzer.java;231;235;0;
+;;spring-boot;1;/home/les-02/NovoTGLambda/projects/spring-boot/spring-boot-autoconfigure/src/main/java/org/springframework/boot/autoconfigure/template/TemplateLocation.java;68;72;0;
+;;spring-boot;1;/home/les-02/NovoTGLambda/projects/spring-boot/spring-boot-test-autoconfigure/src/main/java/org/springframework/boot/test/autoconfigure/filter/FilterAnnotations.java;106;110;0;
+;;spring-boot;1;/home/les-02/NovoTGLambda/projects/spring-boot/spring-boot-test-autoconfigure/src/main/java/org/springframework/boot/test/autoconfigure/filter/TypeExcludeFiltersContextCustomizer.java;102;106;0;
+;;spring-boot;1;/home/les-02/NovoTGLambda/projects/spring-boot/spring-boot-actuator/src/main/java/org/springframework/boot/actuate/autoconfigure/EndpointWebMvcChildContextConfiguration.java;275;279;0;
+;;spring-boot;1;/home/les-02/NovoTGLambda/projects/spring-boot/spring-boot-test/src/main/java/org/springframework/boot/test/context/ImportsContextCustomizer.java;277;281;0;
+;;spring-boot;1;/home/les-02/NovoTGLambda/projects/spring-boot/spring-boot-cli/src/main/java/org/springframework/boot/cli/command/CommandRunner.java;126;130;0;

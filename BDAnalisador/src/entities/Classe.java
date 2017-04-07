@@ -14,15 +14,15 @@ public class Classe implements Serializable {
 	private static final long serialVersionUID = 1L;
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer idClasse;
+	private Long idClasse;
 	
 	private Integer idVersao;
 	private String nome;
 	
-	public Integer getId() {
+	public Long getId() {
 		return idClasse;
 	}
-	public void setId(Integer id) {
+	public void setId(Long id) {
 		this.idClasse = id;
 	}
 	public Integer getVersao() {

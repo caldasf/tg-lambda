@@ -1,0 +1,15 @@
+typeProject;before;project;version;file;start;end;name;superClass;interfaces;typeParameters;typeParameterModifiers;annotations;
+;;RxAndroid;1;/home/les-02/NovoTGLambda/projects/RxAndroid/rxandroid/src/main/java/io/reactivex/android/schedulers/AndroidSchedulers.java;24;53;AndroidSchedulers;null;[];0;[];[];
+;;RxAndroid;1;/home/les-02/NovoTGLambda/projects/RxAndroid/rxandroid/src/main/java/io/reactivex/android/schedulers/AndroidSchedulers.java;27;30;MainHolder;null;[];0;[];[];
+;;RxAndroid;1;/home/les-02/NovoTGLambda/projects/RxAndroid/rxandroid/src/main/java/io/reactivex/android/schedulers/HandlerScheduler.java;24;130;HandlerScheduler;Scheduler;[];0;[];[];
+;;RxAndroid;1;/home/les-02/NovoTGLambda/projects/RxAndroid/rxandroid/src/main/java/io/reactivex/android/schedulers/HandlerScheduler.java;47;93;HandlerWorker;Worker;[];0;[];[];
+;;RxAndroid;1;/home/les-02/NovoTGLambda/projects/RxAndroid/rxandroid/src/main/java/io/reactivex/android/schedulers/HandlerScheduler.java;95;129;ScheduledRunnable;null;[Runnable, Disposable];0;[];[];
+;;RxAndroid;1;/home/les-02/NovoTGLambda/projects/RxAndroid/rxandroid/src/main/java/io/reactivex/android/plugins/RxAndroidPlugins.java;22;115;RxAndroidPlugins;null;[];0;[];[];
+;;RxAndroid;1;/home/les-02/NovoTGLambda/projects/RxAndroid/rxandroid/src/main/java/io/reactivex/android/MainThreadDisposable.java;21;85;MainThreadDisposable;null;[Disposable];0;[];[];
+;;RxAndroid;1;/home/les-02/NovoTGLambda/projects/RxAndroid/rxandroid/src/test/java/io/reactivex/android/schedulers/AndroidSchedulersTest.java;34;75;AndroidSchedulersTest;null;[];0;[];[RunWith, Config];
+;;RxAndroid;1;/home/les-02/NovoTGLambda/projects/RxAndroid/rxandroid/src/test/java/io/reactivex/android/schedulers/HandlerSchedulerTest.java;49;768;HandlerSchedulerTest;null;[];0;[];[RunWith, Config];
+;;RxAndroid;1;/home/les-02/NovoTGLambda/projects/RxAndroid/rxandroid/src/test/java/io/reactivex/android/plugins/RxAndroidPluginsTest.java;36;196;RxAndroidPluginsTest;null;[];0;[];[RunWith, Config];
+;;RxAndroid;1;/home/les-02/NovoTGLambda/projects/RxAndroid/rxandroid/src/test/java/io/reactivex/android/MainThreadDisposableTest.java;32;119;MainThreadDisposableTest;null;[];0;[];[RunWith, Config];
+;;RxAndroid;1;/home/les-02/NovoTGLambda/projects/RxAndroid/rxandroid/src/test/java/io/reactivex/android/testutil/EmptyScheduler.java;18;23;EmptyScheduler;Scheduler;[];0;[];[];
+;;RxAndroid;1;/home/les-02/NovoTGLambda/projects/RxAndroid/rxandroid/src/test/java/io/reactivex/android/testutil/CountingRunnable.java;18;23;CountingRunnable;AtomicInteger;[Runnable];0;[];[];
+;;RxAndroid;1;/home/les-02/NovoTGLambda/projects/RxAndroid/sample-app/src/main/java/io/reactivex/android/samples/MainActivity.java;29;79;MainActivity;Activity;[];0;[];[];

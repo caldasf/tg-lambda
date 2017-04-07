@@ -1,0 +1,3 @@
+typeProject;before;project;version;file;start;end;switchString;
+;;EventBus;1;/home/les-02/NovoTGLambda/projects/EventBus/EventBusPerformance/src/org/greenrobot/eventbusperf/testsubject/PerfTestEventBus.java;66;77;false;
+;;EventBus;1;/home/les-02/NovoTGLambda/projects/EventBus/EventBus/src/org/greenrobot/eventbus/EventBus.java;414;437;false;

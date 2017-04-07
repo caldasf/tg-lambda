@@ -1,0 +1,13 @@
+typeProject;before;project;version;file;start;end;switchString;
+;;android-async-http;1;/home/les-02/NovoTGLambda/projects/android-async-http/sample/src/main/java/com/loopj/android/http/sample/Http401AuthSample.java;206;225;false;
+;;android-async-http;1;/home/les-02/NovoTGLambda/projects/android-async-http/sample/src/main/java/com/loopj/android/http/sample/SampleParentActivity.java;90;97;false;
+;;android-async-http;1;/home/les-02/NovoTGLambda/projects/android-async-http/sample/src/main/java/com/loopj/android/http/sample/SampleParentActivity.java;177;196;false;
+;;android-async-http;1;/home/les-02/NovoTGLambda/projects/android-async-http/library/src/main/java/com/loopj/android/http/AsyncHttpResponseHandler.java;349;395;false;
+;;android-async-http;1;/home/les-02/NovoTGLambda/projects/android-async-http/library/src/main/java/com/loopj/android/http/Base64.java;210;219;false;
+;;android-async-http;1;/home/les-02/NovoTGLambda/projects/android-async-http/library/src/main/java/com/loopj/android/http/Base64.java;397;470;false;
+;;android-async-http;1;/home/les-02/NovoTGLambda/projects/android-async-http/library/src/main/java/com/loopj/android/http/Base64.java;485;513;false;
+;;android-async-http;1;/home/les-02/NovoTGLambda/projects/android-async-http/library/src/main/java/com/loopj/android/http/Base64.java;592;617;false;
+;;android-async-http;1;/home/les-02/NovoTGLambda/projects/android-async-http/library/src/main/java/com/loopj/android/http/DataAsyncHttpResponseHandler.java;90;103;false;
+;;android-async-http;1;/home/les-02/NovoTGLambda/projects/android-async-http/library/src/main/java/com/loopj/android/http/LogHandler.java;43;66;false;
+;;android-async-http;1;/home/les-02/NovoTGLambda/projects/android-async-http/library/src/main/java/com/loopj/android/http/MyRedirectHandler.java;66;74;false;
+;;android-async-http;1;/home/les-02/NovoTGLambda/projects/android-async-http/library/src/main/java/com/loopj/android/http/JsonStreamerEntity.java;101;137;false;

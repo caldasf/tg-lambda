@@ -1,0 +1,12 @@
+typeProject;before;project;version;file;start;end;
+;;Hystrix;1;/home/les-02/NovoTGLambda/projects/Hystrix/hystrix-core/src/main/java/com/netflix/hystrix/AbstractCommand.java;148;152;
+;;Hystrix;1;/home/les-02/NovoTGLambda/projects/Hystrix/hystrix-core/src/main/java/com/netflix/hystrix/HystrixCollapser.java;492;496;
+;;Hystrix;1;/home/les-02/NovoTGLambda/projects/Hystrix/hystrix-core/src/main/java/com/netflix/hystrix/HystrixObservableCollapser.java;513;517;
+;;Hystrix;1;/home/les-02/NovoTGLambda/projects/Hystrix/hystrix-core/src/test/java/com/netflix/hystrix/HystrixCollapserTest.java;2027;2029;
+;;Hystrix;1;/home/les-02/NovoTGLambda/projects/Hystrix/hystrix-core/src/test/java/com/netflix/hystrix/HystrixCollapserTest.java;2030;2036;
+;;Hystrix;1;/home/les-02/NovoTGLambda/projects/Hystrix/hystrix-core/src/test/java/com/netflix/hystrix/HystrixObservableCollapserTest.java;110;114;
+;;Hystrix;1;/home/les-02/NovoTGLambda/projects/Hystrix/hystrix-core/src/test/java/com/netflix/hystrix/HystrixObservableCollapserTest.java;122;126;
+;;Hystrix;1;/home/les-02/NovoTGLambda/projects/Hystrix/hystrix-core/src/test/java/com/netflix/hystrix/HystrixObservableCollapserTest.java;1689;1695;
+;;Hystrix;1;/home/les-02/NovoTGLambda/projects/Hystrix/hystrix-contrib/hystrix-network-auditor-agent/src/main/java/com/netflix/hystrix/contrib/networkauditor/NetworkClassTransform.java;48;54;
+;;Hystrix;1;/home/les-02/NovoTGLambda/projects/Hystrix/hystrix-contrib/hystrix-network-auditor-agent/src/main/java/com/netflix/hystrix/contrib/networkauditor/NetworkClassTransform.java;51;54;
+;;Hystrix;1;/home/les-02/NovoTGLambda/projects/Hystrix/hystrix-contrib/hystrix-javanica/src/test/java/com/netflix/hystrix/contrib/javanica/test/common/collapser/BasicCollapserTest.java;232;234;

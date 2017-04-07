@@ -13,23 +13,23 @@ public class Metodo implements Serializable {
 	private static final long serialVersionUID = 1L;
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer idMetodo;
+	private Long idMetodo;
 	private String nome;
 	private Integer qtdLambda;
 	private Integer qtdForEach;
 	private Integer qtdAic;
 	private Integer qtdFilter;
 	private Integer qtdMaps;
-	private Integer idClasse;
+	private Long idClasse;
 	
 	private Integer linhaInicio;
 	private Integer linhaFim;
 	@Transient private String nomeClasse;
 	
-	public Integer getIdMetodo() {
+	public Long getIdMetodo() {
 		return idMetodo;
 	}
-	public void setIdMetodo(Integer idMetodo) {
+	public void setIdMetodo(Long idMetodo) {
 		this.idMetodo = idMetodo;
 	}
 	public String getNomeClasse() {
@@ -38,19 +38,19 @@ public class Metodo implements Serializable {
 	public void setNomeClasse(String nomeClasse) {
 		this.nomeClasse = nomeClasse;
 	}
-	public Integer getIdClasse() {
+	public Long getIdClasse() {
 		return idClasse;
 	}
-	public void setIdClasse(Integer idClasse) {
+	public void setIdClasse(Long idClasse) {
 		this.idClasse = idClasse;
 	}
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
-	public Integer getClasse() {
+	public Long getClasse() {
 		return idClasse;
 	}
-	public void setClasse(Integer classe) {
+	public void setClasse(Long classe) {
 		this.idClasse = classe;
 	}
 	public Integer getLinhaInicio() {
@@ -65,10 +65,10 @@ public class Metodo implements Serializable {
 	public void setLinhaFim(Integer linhaFim) {
 		this.linhaFim = linhaFim;
 	}
-	public Integer getId() {
+	public Long getId() {
 		return idMetodo;
 	}
-	public void setId(Integer id) {
+	public void setId(Long id) {
 		this.idMetodo = id;
 	}
 	public String getNome() {
