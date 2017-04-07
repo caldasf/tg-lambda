@@ -1,6 +1,5 @@
 #!/usr/bin/python
 # https://www.atlassian.com/git/tutorials/git-log
-#what to do: make the checkout work > finish the line counting function and then run the jar on the input files
 
 
 import csv
@@ -14,13 +13,13 @@ import CreateInput
 fname = '/home/luna/workspace/static-analysis/input.csv';
 
 #preference folder where will save new inputs for static-analysis
-inputs_location = '/home/luna/TG/tg-lambda/scripts/inputs/';
+inputs_location = '/home/luna/TG/tg-lambda/BDAnalisador/input/';
 
 #directory where all projects are
 projects_dir = '/home/luna/TG/java-projects/'
 
 #jat with static analysis
-static_jar = '/home/luna/TG/tg-lambda/static2.jar'
+static_jar = '/home/luna/TG/tg-lambda/BDAnalisador/static2.jar'
 
 ############################################################################
 
@@ -94,7 +93,7 @@ def changeInput(date_after, date_before):
 			#change working directory to project directory
 			os.chdir(path_project)
 
-			os.system('git log --after="' + date_after + '" --before="' + date_before +'" -1 --pretty=format:"%H, %an, %cd, %s" > temp.csv')
+			os.system('git log --after="' + date_after + '" --before="' + date_before +'" -1 --date=format:"%Y-%m-%d" > temp.csv')
 			
 
 			#if log is not empty = exists a commit in this period
@@ -141,7 +140,7 @@ def main ():
 	date_before = '2017-2-1'
 
 	day = 01
-	month = 03
+	month = 04
 	year = 2017
 
 	while (year > 2012):

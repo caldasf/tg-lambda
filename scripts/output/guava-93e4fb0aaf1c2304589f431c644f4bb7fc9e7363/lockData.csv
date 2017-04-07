@@ -1,0 +1,16 @@
+typeProject;before;project;version;file;start;end;type;callLock;releaseLock;
+;;guava;93e4fb0aaf1c2304589f431c644f4bb7fc9e7363;/home/luna/TG/java-projects/guava/guava/src/com/google/common/util/concurrent/Monitor.java;394;421;ReentrantLock;false;false;
+;;guava;93e4fb0aaf1c2304589f431c644f4bb7fc9e7363;/home/luna/TG/java-projects/guava/guava/src/com/google/common/util/concurrent/Monitor.java;444;468;ReentrantLock;false;false;
+;;guava;93e4fb0aaf1c2304589f431c644f4bb7fc9e7363;/home/luna/TG/java-projects/guava/guava/src/com/google/common/util/concurrent/Monitor.java;470;492;ReentrantLock;true;false;
+;;guava;93e4fb0aaf1c2304589f431c644f4bb7fc9e7363;/home/luna/TG/java-projects/guava/guava/src/com/google/common/util/concurrent/Monitor.java;494;551;ReentrantLock;false;true;
+;;guava;93e4fb0aaf1c2304589f431c644f4bb7fc9e7363;/home/luna/TG/java-projects/guava/guava/src/com/google/common/util/concurrent/Monitor.java;553;617;ReentrantLock;false;true;
+;;guava;93e4fb0aaf1c2304589f431c644f4bb7fc9e7363;/home/luna/TG/java-projects/guava/guava/src/com/google/common/util/concurrent/Monitor.java;619;640;ReentrantLock;true;true;
+;;guava;93e4fb0aaf1c2304589f431c644f4bb7fc9e7363;/home/luna/TG/java-projects/guava/guava/src/com/google/common/util/concurrent/Monitor.java;642;664;ReentrantLock;false;true;
+;;guava;93e4fb0aaf1c2304589f431c644f4bb7fc9e7363;/home/luna/TG/java-projects/guava/guava/src/com/google/common/util/concurrent/Monitor.java;690;714;ReentrantLock;false;true;
+;;guava;93e4fb0aaf1c2304589f431c644f4bb7fc9e7363;/home/luna/TG/java-projects/guava/guava/src/com/google/common/util/concurrent/Monitor.java;716;741;ReentrantLock;false;true;
+;;guava;93e4fb0aaf1c2304589f431c644f4bb7fc9e7363;/home/luna/TG/java-projects/guava/guava/src/com/google/common/util/concurrent/Monitor.java;829;842;ReentrantLock;false;true;
+;;guava;93e4fb0aaf1c2304589f431c644f4bb7fc9e7363;/home/luna/TG/java-projects/guava/guava-tests/test/com/google/common/util/concurrent/CycleDetectingLockFactoryTest.java;232;249;Lock;true;true;
+;;guava;93e4fb0aaf1c2304589f431c644f4bb7fc9e7363;/home/luna/TG/java-projects/guava/guava-tests/test/com/google/common/util/concurrent/CycleDetectingLockFactoryTest.java;251;265;Lock;true;true;
+;;guava;93e4fb0aaf1c2304589f431c644f4bb7fc9e7363;/home/luna/TG/java-projects/guava/guava-tests/test/com/google/common/util/concurrent/CycleDetectingLockFactoryTest.java;267;282;Lock;true;true;
+;;guava;93e4fb0aaf1c2304589f431c644f4bb7fc9e7363;/home/luna/TG/java-projects/guava/guava-tests/test/com/google/common/util/concurrent/CycleDetectingLockFactoryTest.java;428;447;ReentrantLock;true;true;
+;;guava;93e4fb0aaf1c2304589f431c644f4bb7fc9e7363;/home/luna/TG/java-projects/guava/guava-tests/test/com/google/common/util/concurrent/CycleDetectingLockFactoryTest.java;449;464;ReentrantLock;true;true;

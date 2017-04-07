@@ -1,13 +1,12 @@
 package entities;
 
 import java.io.Serializable;
+import java.sql.Date;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
 
 @Entity
 public class Versao implements Serializable {
@@ -17,7 +16,14 @@ public class Versao implements Serializable {
 	private Integer idVersao;
 	private Integer idProjeto;
 	private String numVersao;
+	private Date data;
 	
+	public Date getData() {
+		return data;
+	}
+	public void setData(Date data) {
+		this.data = data;
+	}
 	public Integer getId() {
 		return idVersao;
 	}

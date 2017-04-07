@@ -3,6 +3,11 @@ package controlador;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.sql.Date;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,7 +29,7 @@ public class Controlador {
 	private DAOVersao daoVersao;
 	private DAOClasse daoClasse;
 	private DAOMetodo daoMetodo;
-	private String path = "/home/luna/workspace/static-analysis/";
+	private String path = "";
 	
 	public BufferedReader lerArquivo(String nomeArquivo) {
 		BufferedReader br = null;
@@ -42,7 +47,22 @@ public class Controlador {
 		return null;
 	}
 	
-	public void inicializar() throws IOException {
+	private void reinicializarBanco() {
+		try {
+			String line;
+			Process p = Runtime.getRuntime().exec("mysql -u root < " + path + "/import_db.sql");
+			BufferedReader input = new BufferedReader(new InputStreamReader(p.getInputStream()));
+			while ((line = input.readLine()) != null) {
+				System.out.println(line);
+			}
+			input.close();
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public void inicializar() throws IOException, ParseException {
 		projeto = new Projeto();
 		versao = new Versao();
 		daoProjeto = new DAOProjeto();
@@ -51,7 +71,9 @@ public class Controlador {
 		daoMetodo = new DAOMetodo();
 		listaMetodos = new ArrayList<Metodo>();
 		listaClasses = new ArrayList<Classe>();
-
+		
+		path = System.getProperty("user.dir") + "/";
+//		reinicializarBanco();
 		
 		String inputCsv = path + "input.csv";
 		BufferedReader br = lerArquivo(inputCsv);
@@ -71,6 +93,11 @@ public class Controlador {
 			
 			//Versao
 			versao.setNumVersao(array[3]);
+			
+			DateFormat format = new SimpleDateFormat("dd-mm-yyyy");
+			Date data = (Date) format.parse(array[6]);
+			versao.setData(data);
+			
 			popularVersao();
 			
 			//Classes e Metodos

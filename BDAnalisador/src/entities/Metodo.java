@@ -22,8 +22,8 @@ public class Metodo implements Serializable {
 	private Integer qtdMaps;
 	private Integer idClasse;
 	
-	@Transient private Integer linhaInicio;
-	@Transient private Integer linhaFim;
+	private Integer linhaInicio;
+	private Integer linhaFim;
 	@Transient private String nomeClasse;
 	
 	public Integer getIdMetodo() {
