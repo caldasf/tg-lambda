@@ -17,6 +17,11 @@ lang = 'Java'
 sumFile = 'summary.csv'
 
 
+def gitToHttps(urlName):
+	new_url = urlName[3:]
+	new_url = 'https' + new_url
+	return new_url
+
 #List_repositories.py
 def listRepositories ():
 	prefix = 'https://api.github.com/search/repositories?q='
@@ -66,11 +71,12 @@ def listRepositories ():
 	count = 0   
 	for item in items: 
 		if(count < projects and item != None):
+			
 			line   = item.get("name", "-") + ","
 			line  += str(item.get("size", "-")) + "," 
 			line  += str(item.get("watchers", "-")) + "," 
 			line  += str(item.get("forks", "-")) + "," 
-			line  += item.get("git_url", "-") + "," 
+			line  += gitToHttps(item.get("git_url", "-")) + "," 
 			line  += item.get("description", "-")    
 			count += 1
 			f.write(line.encode('utf8') + '\n')
@@ -185,8 +191,7 @@ def createInput(slocFile, dirProjects):
 
 def main():
 
-	#listProjects = listRepositories()
-	listProjects = "/home/les-02/TGLambda/tg-lambda/BDAnalisador/java.projects"
+	listProjects = listRepositories()
 	dirProjects = cloneRepo(listProjects)
 	#dirProjects = '/home/luna/TG/tg-lambda/projects/'
 	slocFile = countLinesProjects(dirProjects, sumFile)

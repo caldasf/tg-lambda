@@ -56,7 +56,7 @@ def changeLineCount(inputFile, tempFile):
  		i = 0
  		for project in projects:
  			print vet[i]
- 			output.write(project[0] + ';' + project[1] + ';' + project[2]+ ';' + project[3]+ ';' + project[4]+ ';' + vet[i] + '\n');
+ 			output.write(project[0] + ';' + project[1] + ';' + project[2]+ ';' + project[3]+ ';' + project[4]+ ';' + vet[i] + project[6] + '\n');
  			i += 1
  	bFile.close() 
 
@@ -108,7 +108,7 @@ def changeInput(date_after, date_before):
 					project[3] = row[0]
 
 				#save new row in the new file
-				newFile.write(project[0] + ';' + project[1] + ';' + project[2]+ ';' + project[3]+ ';' + project[4]+ ';' + project[5] + '\n');
+				newFile.write(project[0] + ';' + project[1] + ';' + project[2]+ ';' + project[3]+ ';' + project[4]+ ';' + project[5] + row[2] '\n');
 
 				f.close()
 

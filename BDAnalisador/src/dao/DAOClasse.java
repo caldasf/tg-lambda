@@ -21,6 +21,7 @@ public class DAOClasse {
 		
 		manager.getTransaction().commit();
 		
+		
 		manager.close();
 		
 	    factory.close();

@@ -1,9 +1,0 @@
-typeProject;before;project;version;file;start;end;stmts;
-;;glide;1;/home/les-02/NovoTGLambda/projects/glide/library/src/main/java/com/bumptech/glide/load/model/stream/BaseGlideUrlLoader.java;72;74;1;
-;;glide;1;/home/les-02/NovoTGLambda/projects/glide/library/src/main/java/com/bumptech/glide/util/Util.java;176;178;1;
-;;glide;1;/home/les-02/NovoTGLambda/projects/glide/library/src/test/java/com/bumptech/glide/load/model/MultiModelLoaderFactoryTest.java;275;277;1;
-;;glide;1;/home/les-02/NovoTGLambda/projects/glide/library/src/test/java/com/bumptech/glide/load/engine/bitmap_recycle/LruBitmapPoolTest.java;91;93;1;
-;;glide;1;/home/les-02/NovoTGLambda/projects/glide/annotation/compiler/src/main/java/com/bumptech/glide/annotation/compiler/RequestOptionsGenerator.java;139;141;1;
-;;glide;1;/home/les-02/NovoTGLambda/projects/glide/annotation/compiler/src/main/java/com/bumptech/glide/annotation/compiler/RequestOptionsGenerator.java;239;241;1;
-;;glide;1;/home/les-02/NovoTGLambda/projects/glide/annotation/compiler/src/main/java/com/bumptech/glide/annotation/compiler/RequestOptionsGenerator.java;365;367;1;
-;;glide;1;/home/les-02/NovoTGLambda/projects/glide/samples/flickr/src/main/java/com/bumptech/glide/samples/flickr/api/Api.java;100;102;1;

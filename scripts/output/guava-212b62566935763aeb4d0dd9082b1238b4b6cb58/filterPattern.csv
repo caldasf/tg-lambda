@@ -1,4 +1,0 @@
-typeProject;before;project;version;file;start;end;stmts;
-;;guava;212b62566935763aeb4d0dd9082b1238b4b6cb58;/home/luna/TG/java-projects/guava/guava/src/com/google/common/collect/Iterators.java;1246;1250;0;
-;;guava;212b62566935763aeb4d0dd9082b1238b4b6cb58;/home/luna/TG/java-projects/guava/guava-tests/test/com/google/common/collect/TreeRangeSetTest.java;250;254;0;
-;;guava;212b62566935763aeb4d0dd9082b1238b4b6cb58;/home/luna/TG/java-projects/guava/guava-tests/test/com/google/common/collect/ImmutableRangeSetTest.java;515;519;0;

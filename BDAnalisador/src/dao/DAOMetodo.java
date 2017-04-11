@@ -19,7 +19,7 @@ public class DAOMetodo {
 		for (Metodo met : listaMetodos) {
 			manager.persist(met);
 		}
-		
+
 		manager.getTransaction().commit();
 		
 		manager.close();

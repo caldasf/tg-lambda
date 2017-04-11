@@ -1,8 +1,0 @@
-typeProject;before;project;version;file;start;end;
-;;guava;1.9.6;/home/les-02/TGLambda/projetos/guava/guava-tests/test/com/google/common/io/IoTestCase.java;75;83;
-;;guava;1.9.6;/home/les-02/TGLambda/projetos/guava/guava-testlib/test/com/google/common/collect/testing/features/FeatureEnumTest.java;77;85;
-;;guava;1.9.6;/home/les-02/TGLambda/projetos/guava/guava/src/com/google/common/reflect/ClassPath.java;419;421;
-;;guava;1.9.6;/home/les-02/TGLambda/projetos/guava/guava/src/com/google/common/reflect/ClassPath.java;438;443;
-;;guava;1.9.6;/home/les-02/TGLambda/projetos/guava/guava/src/com/google/common/io/Files.java;740;750;
-;;guava;1.9.6;/home/les-02/TGLambda/projetos/guava/guava/src/com/google/common/io/Files.java;742;750;
-;;guava;1.9.6;/home/les-02/TGLambda/projetos/guava/guava/src/com/google/common/io/Files.java;762;766;

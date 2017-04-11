@@ -1,8 +1,0 @@
-typeProject;before;project;version;file;start;end;
-;;guava;fb25083e4628ba4f648b80283d167b667fb0d09c;/home/luna/TG/java-projects/guava/guava/src/com/google/common/io/Files.java;741;751;
-;;guava;fb25083e4628ba4f648b80283d167b667fb0d09c;/home/luna/TG/java-projects/guava/guava/src/com/google/common/io/Files.java;743;751;
-;;guava;fb25083e4628ba4f648b80283d167b667fb0d09c;/home/luna/TG/java-projects/guava/guava/src/com/google/common/io/Files.java;763;767;
-;;guava;fb25083e4628ba4f648b80283d167b667fb0d09c;/home/luna/TG/java-projects/guava/guava/src/com/google/common/reflect/ClassPath.java;372;374;
-;;guava;fb25083e4628ba4f648b80283d167b667fb0d09c;/home/luna/TG/java-projects/guava/guava/src/com/google/common/reflect/ClassPath.java;391;396;
-;;guava;fb25083e4628ba4f648b80283d167b667fb0d09c;/home/luna/TG/java-projects/guava/guava-tests/test/com/google/common/io/IoTestCase.java;76;84;
-;;guava;fb25083e4628ba4f648b80283d167b667fb0d09c;/home/luna/TG/java-projects/guava/guava-testlib/test/com/google/common/collect/testing/features/FeatureEnumTest.java;78;86;

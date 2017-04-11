@@ -1,4 +1,0 @@
-typeProject;before;project;version;file;start;end;type;callLock;releaseLock;
-;;glide;1;/home/les-02/NovoTGLambda/projects/glide/library/src/main/java/com/bumptech/glide/load/engine/cache/DiskCacheWriteLocker.java;25;37;WriteLock;true;false;
-;;glide;1;/home/les-02/NovoTGLambda/projects/glide/library/src/main/java/com/bumptech/glide/load/engine/cache/DiskCacheWriteLocker.java;39;63;WriteLock;false;true;
-;;glide;1;/home/les-02/NovoTGLambda/projects/glide/library/src/main/java/com/bumptech/glide/load/engine/cache/DiskCacheWriteLocker.java;80;89;WriteLock;false;false;
