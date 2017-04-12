@@ -10,21 +10,36 @@ import CreateInput
 
 
 #input that came from create_input.py
-fname = '/home/luna/workspace/static-analysis/input.csv';
+fname = os.getcwd() + '/input_temp.csv';
 
 #preference folder where will save new inputs for static-analysis
-inputs_location = '/home/les-02/TGLambda/tg-lambda/BDAnalisador/inputs/';
+inputs_location = os.getcwd() + '/inputs/';
 
 #directory where all projects are
-projects_dir = '/home/les-02/TGLambda/tg-lambda/BDAnalisador/java-projects/'
+projects_dir = '/home/luna/TG/java-projects/'
 
 #jat with static analysis
-static_jar = '/home/les-02/TGLambda/tg-lambda/BDAnalisador/static2.jar'
+static_jar = os.getcwd() + '/static2.jar'
+
+
+final_input = os.getcwd() + "/input.csv"
 
 ############################################################################
 
 def runStaticAnalysis(inputFile):
 	os.system('java -jar ' + static_jar +' '+inputFile)
+
+
+def createOneInput(newInput):
+	output = open (final_input, 'a')
+	with open(newInput, "r") as bFile:
+		projects = csv.reader(bFile, delimiter=";")
+		for row in projects:
+			output.write(row[0] + ';' + row[1] + ';' + row[2] + ';' + row[3] + ';' + row[4] + ';' + row[5] + ';' + row[6] + '\n' )
+	output.close()
+
+
+
 
 
 def changeLineCount(inputFile, tempFile):
@@ -56,7 +71,8 @@ def changeLineCount(inputFile, tempFile):
  		i = 0
  		for project in projects:
  			print vet[i]
- 			output.write(project[0] + ';' + project[1] + ';' + project[2]+ ';' + project[3]+ ';' + project[4]+ ';' + vet[i] + project[6] + '\n');
+ 			print project 
+ 			output.write(project[0] + ';' + project[1] + ';' + project[2]+ ';' + project[3]+ ';' + project[4]+ ';' + vet[i] +';' +project[6] + '\n');
  			i += 1
  	bFile.close() 
 
@@ -73,17 +89,16 @@ def is_non_zero_file(fpath):
 
 
 def changeInput(date_after, date_before):
-	
 	newInput = inputs_location + 'input-' + date_after + '_' + date_before + '.csv';
 
-	
+	arq_temp = os.getcwd() + "/temp1.csv"
 
 	with open(fname, "r") as aFile:
 		projects = csv.reader(aFile, delimiter=";")
 	
 		cwd = os.getcwd()
 
-		newFile = open(cwd + 'temp1.csv', 'w');
+		newFile = open(arq_temp, 'w');
 
 		for project in projects:
 			
@@ -108,7 +123,7 @@ def changeInput(date_after, date_before):
 					project[3] = row[0]
 
 				#save new row in the new file
-				newFile.write(project[0] + ';' + project[1] + ';' + project[2]+ ';' + project[3]+ ';' + project[4]+ ';' + project[5] + row[2] '\n');
+				newFile.write(project[0] + ';' + project[1] + ';' + project[2]+ ';' + project[3]+ ';' + project[4]+ ';' + project[5] + ';' + row[2] + '\n');
 
 				f.close()
 
@@ -127,10 +142,14 @@ def changeInput(date_after, date_before):
 	#
 
 	#change line count in the new input file
-	changeLineCount(newInput, cwd + 'temp1.csv')
+	changeLineCount(newInput, arq_temp)
 
 	#run static-analysis in new input file
 	runStaticAnalysis(newInput)
+
+	#append to final input.csv file
+	createOneInput(newInput)
+
 
 
 def main ():
@@ -160,6 +179,13 @@ def main ():
 		changeInput(date_after, date_before)
 
 
+
+############################################################
+
+output = open (final_input, 'w')
+output.close()
+
+#fname = CreateInput.main()
 
 main()
 

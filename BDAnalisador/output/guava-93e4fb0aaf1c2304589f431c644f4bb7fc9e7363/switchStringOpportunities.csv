@@ -1,0 +1,16 @@
+typeProject;before;project;version;file;start;end;
+;;guava;93e4fb0aaf1c2304589f431c644f4bb7fc9e7363;/home/luna/TG/java-projects/guava/guava/src/com/google/common/io/Files.java;740;750;
+;;guava;93e4fb0aaf1c2304589f431c644f4bb7fc9e7363;/home/luna/TG/java-projects/guava/guava/src/com/google/common/io/Files.java;742;750;
+;;guava;93e4fb0aaf1c2304589f431c644f4bb7fc9e7363;/home/luna/TG/java-projects/guava/guava/src/com/google/common/io/Files.java;762;766;
+;;guava;93e4fb0aaf1c2304589f431c644f4bb7fc9e7363;/home/luna/TG/java-projects/guava/guava/src/com/google/common/reflect/ClassPath.java;414;416;
+;;guava;93e4fb0aaf1c2304589f431c644f4bb7fc9e7363;/home/luna/TG/java-projects/guava/guava/src/com/google/common/reflect/ClassPath.java;433;438;
+;;guava;93e4fb0aaf1c2304589f431c644f4bb7fc9e7363;/home/luna/TG/java-projects/guava/guava-tests/test/com/google/common/io/IoTestCase.java;75;83;
+;;guava;93e4fb0aaf1c2304589f431c644f4bb7fc9e7363;/home/luna/TG/java-projects/guava/guava-tests/test/com/google/common/collect/AbstractMultisetTest.java;453;463;
+;;guava;93e4fb0aaf1c2304589f431c644f4bb7fc9e7363;/home/luna/TG/java-projects/guava/guava-tests/test/com/google/common/collect/AbstractMultisetTest.java;455;463;
+;;guava;93e4fb0aaf1c2304589f431c644f4bb7fc9e7363;/home/luna/TG/java-projects/guava/guava-tests/test/com/google/common/collect/AbstractMultisetTest.java;457;463;
+;;guava;93e4fb0aaf1c2304589f431c644f4bb7fc9e7363;/home/luna/TG/java-projects/guava/guava-tests/test/com/google/common/collect/AbstractMultisetTest.java;459;463;
+;;guava;93e4fb0aaf1c2304589f431c644f4bb7fc9e7363;/home/luna/TG/java-projects/guava/guava-gwt/test-super/com/google/common/collect/super/com/google/common/collect/AbstractMultisetTest.java;451;461;
+;;guava;93e4fb0aaf1c2304589f431c644f4bb7fc9e7363;/home/luna/TG/java-projects/guava/guava-gwt/test-super/com/google/common/collect/super/com/google/common/collect/AbstractMultisetTest.java;453;461;
+;;guava;93e4fb0aaf1c2304589f431c644f4bb7fc9e7363;/home/luna/TG/java-projects/guava/guava-gwt/test-super/com/google/common/collect/super/com/google/common/collect/AbstractMultisetTest.java;455;461;
+;;guava;93e4fb0aaf1c2304589f431c644f4bb7fc9e7363;/home/luna/TG/java-projects/guava/guava-gwt/test-super/com/google/common/collect/super/com/google/common/collect/AbstractMultisetTest.java;457;461;
+;;guava;93e4fb0aaf1c2304589f431c644f4bb7fc9e7363;/home/luna/TG/java-projects/guava/guava-testlib/test/com/google/common/collect/testing/features/FeatureEnumTest.java;77;85;

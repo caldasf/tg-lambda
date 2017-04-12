@@ -80,7 +80,7 @@ public class Controlador {
 			//Versao
 			versao.setNumVersao(array[3]);
 			
-			DateFormat format = new SimpleDateFormat("dd-MM-yyyy");
+			DateFormat format = new SimpleDateFormat("yyyy-MM-dd");
 			Date data = format.parse(array[6]);
 			versao.setData(data);
 			

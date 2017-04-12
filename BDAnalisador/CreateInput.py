@@ -169,8 +169,8 @@ def countLinesProjects(dirProjects, summaryFile):
 #create final input for static-analysis
 def createInput(slocFile, dirProjects):
 	print '# Creating final input file #'
-	resultFile = raw_input('Your final csv file to be saved: ')
-	
+	#resultFile = raw_input('Your final csv file to be saved: ')
+	resultFile = "input_temp.csv"
 	#files = listdir(dirProjects)
 	fout = file(resultFile, "w")
 
@@ -195,9 +195,9 @@ def main():
 	dirProjects = cloneRepo(listProjects)
 	#dirProjects = '/home/luna/TG/tg-lambda/projects/'
 	slocFile = countLinesProjects(dirProjects, sumFile)
-	createInput(slocFile, dirProjects)
+	result_file = createInput(slocFile, dirProjects)
+	return result_file
 
 
 ###############################################
 
-main()
