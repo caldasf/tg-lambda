@@ -24,11 +24,13 @@ public class Controlador {
 	private Versao versao;
 	private List<Metodo> listaMetodos;
 	private List<Classe> listaClasses;
+	private List<Projeto> listaProjetos;
 	private DAOProjeto daoProjeto;
 	private DAOVersao daoVersao;
 	private DAOClasse daoClasse;
 	private DAOMetodo daoMetodo;
 	private String path = "";
+	private Integer idProjetoEncontrado;
 	
 	public BufferedReader lerArquivo(String nomeArquivo) {
 		BufferedReader br = null;
@@ -46,6 +48,16 @@ public class Controlador {
 		return null;
 	}
 	
+	public boolean buscarProjeto (String nome) {
+		for (Projeto proj : listaProjetos) {
+			if (proj.getNome().equals(nome)) {
+				idProjetoEncontrado = proj.getId();
+				return true;
+			}
+		}
+		return false;
+	}
+	
 	public void inicializar() throws IOException, ParseException {
 		projeto = new Projeto();
 		versao = new Versao();
@@ -55,6 +67,7 @@ public class Controlador {
 		daoMetodo = new DAOMetodo();
 		listaMetodos = new ArrayList<Metodo>();
 		listaClasses = new ArrayList<Classe>();
+		listaProjetos = new ArrayList<Projeto>();
 		
 		path = System.getProperty("user.dir") + "/";
 
@@ -72,9 +85,14 @@ public class Controlador {
 			String array[] = sCurrentLine.split(";");
 			nomePasta += array[2] + "-" + array[3];	
 			//Popular tabela de Projetos
-			if (!projeto.getNome().equals(array[2])) {
+			
+			if (buscarProjeto(array[2])) {
+				versao.setProjeto(idProjetoEncontrado);
+			} 
+			else {
 				projeto.setNome(array[2]);
 				popularProjeto();
+				listaProjetos.add(projeto);
 			}
 			
 			//Versao

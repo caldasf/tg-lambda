@@ -1,0 +1,60 @@
+RxJava,40292,23412,4120,https://github.com/ReactiveX/RxJava.git,RxJava – Reactive Extensions for the JVM – a library for composing asynchronous and event-based programs using observable sequences for the Java VM.
+elasticsearch,334754,22081,7336,https://github.com/elastic/elasticsearch.git,Open Source, Distributed, RESTful Search Engine
+retrofit,4379,20497,4230,https://github.com/square/retrofit.git,Type-safe HTTP client for Android and Java by Square, Inc.
+okhttp,15895,19115,4798,https://github.com/square/okhttp.git,An HTTP+HTTP/2 client for Android and Java applications.
+java-design-patterns,14880,18200,6143,https://github.com/iluwatar/java-design-patterns.git,Design patterns implemented in Java
+guava,145562,15810,3746,https://github.com/google/guava.git,Google Core Libraries for Java
+butterknife,3384,15582,3330,https://github.com/JakeWharton/butterknife.git,Bind Android views and callbacks to fields and methods.
+Android-Universal-Image-Loader,25335,15108,6394,https://github.com/nostra13/Android-Universal-Image-Loader.git,Powerful and flexible library for loading, caching and displaying images on Android.
+MPAndroidChart,20530,15026,4562,https://github.com/PhilJay/MPAndroidChart.git,A powerful Android chart view / graph view library, supporting line- bar- pie- radar- bubble- and candlestick charts as well as scaling, dragging and animations.
+glide,25311,14709,3052,https://github.com/bumptech/glide.git,An image loading and caching library for Android focused on smooth scrolling
+leakcanary,24535,14657,2500,https://github.com/square/leakcanary.git,A memory leak detection library for Android and Java.
+EventBus,1443,14184,3568,https://github.com/greenrobot/EventBus.git,Android optimized event bus that simplifies communication between Activities, Fragments, Threads, Services, etc. Less code, better quality.
+spring-framework,99410,13460,10068,https://github.com/spring-projects/spring-framework.git,The Spring Framework
+picasso,9076,13161,3512,https://github.com/square/picasso.git,A powerful image downloading and caching library for Android
+iosched,49635,13138,4908,https://github.com/google/iosched.git,The Google I/O 2016 Android App
+zxing,238265,13050,6245,https://github.com/zxing/zxing.git,Official ZXing ("Zebra Crossing") project home
+fresco,56656,12447,3285,https://github.com/facebook/fresco.git,An Android library for managing images and the memory they use.
+RxAndroid,723,11961,2079,https://github.com/ReactiveX/RxAndroid.git,RxJava bindings for Android
+lottie-android,100561,11828,1529,https://github.com/airbnb/lottie-android.git,Render After Effects animations natively on Android and iOS
+spring-boot,52709,11658,10797,https://github.com/spring-projects/spring-boot.git,Spring Boot
+libgdx,981159,11254,5162,https://github.com/libgdx/libgdx.git,Desktop/Android/HTML5/iOS Java game development framework
+SlidingMenu,32085,10352,5609,https://github.com/jfeinstein10/SlidingMenu.git,An Android library that allows you to easily create applications with slide-in menus. You may use it in your Android apps provided that you cite this project and include the license in your app. Thanks!
+android-async-http,4077,9752,4337,https://github.com/loopj/android-async-http.git,An Asynchronous HTTP Library for Android
+PhotoView,16709,9706,2888,https://github.com/chrisbanes/PhotoView.git,Implementation of ImageView for Android that supports zooming, by various touch gestures.
+netty,46385,9699,4747,https://github.com/netty/netty.git,Netty project - an event-driven asynchronous network application framework
+material-dialogs,153853,9331,1886,https://github.com/afollestad/material-dialogs.git,A beautiful, fluid, and customizable dialogs API.
+Hystrix,9369,9285,1835,https://github.com/Netflix/Hystrix.git,Hystrix is a latency and fault tolerance library designed to isolate points of access to remote systems, services and 3rd party libraries, stop cascading failure and enable resilience in complex distributed systems where failure is inevitable.
+androidannotations,21980,9180,2368,https://github.com/androidannotations/androidannotations.git,Fast Android Development. Easy maintainance.
+AndroidUtilCode,1665,9135,3016,https://github.com/Blankj/AndroidUtilCode.git,Android developers should collect the following utils(updating)
+storm,27015,8969,1795,https://github.com/nathanmarz/storm.git,Distributed and fault-tolerant realtime computation: stream processing, continuous computation, distributed RPC, and more
+Material-Animations,8730,8932,1917,https://github.com/lgvalle/Material-Animations.git,Android Transition animations explanation with examples.
+ViewPagerIndicator,8657,8801,4219,https://github.com/JakeWharton/ViewPagerIndicator.git,Paging indicator widgets compatible with the ViewPager from the Android Support Library and ActionBarSherlock.
+plaid,27314,8740,1826,https://github.com/nickbutcher/plaid.git,An Android app which provides design news & inspiration as well as being an example of implementing material design.
+fastjson,10009,8738,3082,https://github.com/alibaba/fastjson.git,:bullettrain_side: A fast JSON parser/generator for Java
+PocketHub,10442,8674,3725,https://github.com/pockethub/PocketHub.git,PocketHub Android App
+tinker,3787,8456,1739,https://github.com/Tencent/tinker.git,Tinker is a hot-fix solution library for Android, it supports dex, library and resources update without reinstall apk.
+Android-CleanArchitecture,5176,8310,2135,https://github.com/android10/Android-CleanArchitecture.git,This is a sample app that is part of a series of blog posts I have written about how to architect an android application using Uncle Bob's clean architecture approach.
+dubbo,6493,8242,7995,https://github.com/alibaba/dubbo.git,:loudspeaker: Dubbo is a distributed, high performance RPC framework empowering applications with service import/export capabilities.
+Android-PullToRefresh,4286,8080,5133,https://github.com/chrisbanes/Android-PullToRefresh.git,DEPRECATED
+interviews,19297,8080,862,https://github.com/kdn251/interviews.git,Everything you need to know to get the job.
+MaterialDesignLibrary,8930,8078,2367,https://github.com/navasmdc/MaterialDesignLibrary.git,This is a library with components of Android L to you use in android 2.2
+Signal-Android,109058,7740,2079,https://github.com/WhisperSystems/Signal-Android.git,A private messenger for Android.
+kotlin,374731,7730,825,https://github.com/JetBrains/kotlin.git,The Kotlin Programming Language
+AndroidSwipeLayout,395,7719,2183,https://github.com/daimajia/AndroidSwipeLayout.git,The Most Powerful Swipe Layout!
+flexbox-layout,48710,7664,799,https://github.com/google/flexbox-layout.git,Flexbox for Android 
+android-Ultra-Pull-To-Refresh,3474,7634,2539,https://github.com/liaohuqiu/android-Ultra-Pull-To-Refresh.git,Ultra Pull to Refresh for Android. Support all the views.
+HomeMirror,5989,7558,658,https://github.com/HannahMitt/HomeMirror.git,Android application powering the mirror in my house
+realm-java,51725,7524,1177,https://github.com/realm/realm-java.git,Realm is a mobile database: a replacement for SQLite & ORMs
+android-UniversalMusicPlayer,7796,7493,2468,https://github.com/googlesamples/android-UniversalMusicPlayer.git,This sample shows how to implement an audio media app that works across multiple form factors and provide a consistent user experience on Android phones, tablets, Auto, Wear and Cast devices
+greenDAO,7103,7404,2235,https://github.com/greenrobot/greenDAO.git,greenDAO is a light & fast ORM solution for Android that maps objects to SQLite databases.
+ActionBarSherlock,21244,7385,4101,https://github.com/JakeWharton/ActionBarSherlock.git,[DEPRECATED] Action bar implementation which uses the native action bar on Android 4.0+ and a custom implementation on pre-4.0 through a single API and theme.
+stetho,2048,7383,691,https://github.com/facebook/stetho.git,Stetho is a debug bridge for Android applications, enabling the powerful Chrome Developer Tools and much more.
+Android-ObservableScrollView,13780,7366,1877,https://github.com/ksoichiro/Android-ObservableScrollView.git,Android library to observe scroll events on scrollable views.
+MaterialDrawer,20266,7273,1516,https://github.com/mikepenz/MaterialDrawer.git,The flexible, easy to use, all in one drawer library for your Android project.
+AndroidViewAnimations,285,7234,1746,https://github.com/daimajia/AndroidViewAnimations.git,Cute view animation collection.
+FizzBuzzEnterpriseEdition,284,6985,360,https://github.com/EnterpriseQualityCoding/FizzBuzzEnterpriseEdition.git,FizzBuzz Enterprise Edition is a no-nonsense implementation of FizzBuzz made by serious businessmen for serious business purposes.
+java8-tutorial,218,6849,1205,https://github.com/winterbe/java8-tutorial.git,Modern Java - A Guide to Java 8
+CircleImageView,956,6643,1852,https://github.com/hdodenhof/CircleImageView.git,A circular ImageView for Android
+cheesesquare,1274,6602,1657,https://github.com/chrisbanes/cheesesquare.git,Demos the new Android Design library.
+BaseRecyclerViewAdapterHelper,58979,6569,1476,https://github.com/CymChad/BaseRecyclerViewAdapterHelper.git,Powerful and flexible RecyclerAdapter, www.recyclerview.org

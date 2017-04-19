@@ -16,7 +16,7 @@ fname = os.getcwd() + '/input_temp.csv';
 inputs_location = os.getcwd() + '/inputs/';
 
 #directory where all projects are
-projects_dir = '/home/luna/TG/java-projects/'
+projects_dir = '/home/les-02/TGLambda/java_projects_final/'
 
 #jat with static analysis
 static_jar = os.getcwd() + '/static2.jar'
@@ -24,7 +24,13 @@ static_jar = os.getcwd() + '/static2.jar'
 
 final_input = os.getcwd() + "/input.csv"
 
+BDAnalisador = os.getcwd() + '/BDAnalisador.jar'
+
 ############################################################################
+
+def runBDAnalisador(inputFile):
+	os.system('java -jar ' + BDAnalisador)
+
 
 def runStaticAnalysis(inputFile):
 	os.system('java -jar ' + static_jar +' '+inputFile)
@@ -40,46 +46,55 @@ def createOneInput(newInput):
 
 
 
+def getProject(project, slocF):
+	aFile = file(slocF, "r")
+	reader = csv.reader(aFile)
+	for row in reader:
+		projectName = row[0][:-4]
+		if (projectName == project):
+			return row[1]
+	aFile.close()
 
 
 def changeLineCount(inputFile, tempFile):
 	slocFile = CreateInput.countLinesProjects(projects_dir, 'summary.csv')
-	vet = [0 for i in xrange(100)]
-
-	i = 0 
+	#slocFile = '/home/les-02/TGLambda/tg-lambda/BDAnalisador/summary.csv'
+	vet = [0 for i in xrange(500)]
+	i = 0
+	 
 
 	#open slocFile
-	aFile = file(slocFile, "rt")
-	reader = csv.reader(aFile)
-
+	#aFile = file(slocFile, "r")
+	#reader = csv.reader(aFile)
+	
 	with open(tempFile, "r") as bFile:
+		
 		projects = csv.reader(bFile, delimiter=";")
-		for row in reader:
-		#open new input file
-			for project in projects:
-				projectName = row[0][:-4]
-				if (projectName == project[2]):
-					vet[i] = row[1]
-					i += 1
+		for project in projects:
+			vet[i] = getProject(project[2], slocFile)
+			#print vet[i]
+			i += 1
+						
+					
 
 	bFile.close() 	
  	
+	i = 0
 	with open(tempFile, "r") as bFile:
 		projects = csv.reader(bFile, delimiter=";")
-
+		
  		output = open (inputFile, 'w')
- 		i = 0
+ 		string_linhas = str(vet[i])
+
  		for project in projects:
- 			print vet[i]
- 			print project 
- 			output.write(project[0] + ';' + project[1] + ';' + project[2]+ ';' + project[3]+ ';' + project[4]+ ';' + vet[i] +';' +project[6] + '\n');
+			#print string_linhas
+			#print vet[i]
+ 			output.write(project[0] + ';' + project[1] + ';' + project[2]+ ';' + project[3]+ ';' + project[4]+ ';' + str(vet[i]) +';' + project[6] + ';' + '\n');
  			i += 1
+
  	bFile.close() 
 
  	output.close()
-
-	aFile.close()
-
 
 
 
@@ -159,7 +174,7 @@ def main ():
 	date_before = '2017-2-1'
 
 	day = 01
-	month = 03
+	month = 04
 	year = 2017
 
 	while (year > 2012):
@@ -177,6 +192,8 @@ def main ():
 		
 		print date_after + ' & ' + date_before
 		changeInput(date_after, date_before)
+	
+	runBDAnalisador(final_input)
 
 
 
@@ -189,3 +206,4 @@ output.close()
 
 main()
 
+#changeLineCount('test.csv', 'input_temp.csv')
