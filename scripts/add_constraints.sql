@@ -12,3 +12,10 @@ ALTER TABLE `Metodo`
     REFERENCES `Classe` (`idClasse`)
     ON DELETE RESTRICT
     ON UPDATE RESTRICT;
+
+ALTER TABLE `Versao`
+  ADD CONSTRAINT `Versao_fk_Projeto` 
+    FOREIGN KEY (`idProjeto`)
+    REFERENCES `Projeto` (`idProjeto`)
+    ON DELETE RESTRICT
+    ON UPDATE RESTRICT;

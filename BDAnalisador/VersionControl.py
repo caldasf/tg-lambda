@@ -16,7 +16,7 @@ fname = os.getcwd() + '/input_temp.csv';
 inputs_location = os.getcwd() + '/inputs/';
 
 #directory where all projects are
-projects_dir = '/home/les-02/TGLambda/java_projects_final/'
+projects_dir = '/home/luna/TG/java-projects/'
 
 #jat with static analysis
 static_jar = os.getcwd() + '/static2.jar'
@@ -174,8 +174,8 @@ def main ():
 	date_before = '2017-2-1'
 
 	day = 01
-	month = 04
-	year = 2017
+	month = 11
+	year = 2012
 
 	while (year > 2012):
 
@@ -199,8 +199,8 @@ def main ():
 
 ############################################################
 
-output = open (final_input, 'w')
-output.close()
+#output = open (final_input, 'w')
+#output.close()
 
 #fname = CreateInput.main()
 

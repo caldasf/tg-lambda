@@ -56,8 +56,11 @@ def listRepositories ():
 	#  print(line)
 		pagination += 1 
 
-	pages = 1 + (projects // pagination)
 
+
+	pages = 1 + (projects / pagination)
+	
+	#corrigir, isso nao funciona direito
 	for i in range(1, pages):
 		print uri + str(i + 1)
 		response = requests.get(uri + str(i + 1))
@@ -66,18 +69,17 @@ def listRepositories ():
 			items = items + data['items']
 		else: 
 			print data
-		break 
+			break 
 
 	count = 0   
 	for item in items: 
 		if(count < projects and item != None):
-			
 			line   = item.get("name", "-") + ","
 			line  += str(item.get("size", "-")) + "," 
 			line  += str(item.get("watchers", "-")) + "," 
 			line  += str(item.get("forks", "-")) + "," 
-			line  += gitToHttps(item.get("git_url", "-")) + "," 
-			line  += item.get("description", "-")    
+			line  += item.get("git_url", "-") #+ "," 
+			#line  += item.get("description", "-")    
 			count += 1
 			f.write(line.encode('utf8') + '\n')
 		elif(count >= projects):  

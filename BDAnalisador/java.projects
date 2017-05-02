@@ -1,60 +1,100 @@
-RxJava,40292,23412,4120,https://github.com/ReactiveX/RxJava.git,RxJava – Reactive Extensions for the JVM – a library for composing asynchronous and event-based programs using observable sequences for the Java VM.
-elasticsearch,334754,22081,7336,https://github.com/elastic/elasticsearch.git,Open Source, Distributed, RESTful Search Engine
-retrofit,4379,20497,4230,https://github.com/square/retrofit.git,Type-safe HTTP client for Android and Java by Square, Inc.
-okhttp,15895,19115,4798,https://github.com/square/okhttp.git,An HTTP+HTTP/2 client for Android and Java applications.
-java-design-patterns,14880,18200,6143,https://github.com/iluwatar/java-design-patterns.git,Design patterns implemented in Java
-guava,145562,15810,3746,https://github.com/google/guava.git,Google Core Libraries for Java
-butterknife,3384,15582,3330,https://github.com/JakeWharton/butterknife.git,Bind Android views and callbacks to fields and methods.
-Android-Universal-Image-Loader,25335,15108,6394,https://github.com/nostra13/Android-Universal-Image-Loader.git,Powerful and flexible library for loading, caching and displaying images on Android.
-MPAndroidChart,20530,15026,4562,https://github.com/PhilJay/MPAndroidChart.git,A powerful Android chart view / graph view library, supporting line- bar- pie- radar- bubble- and candlestick charts as well as scaling, dragging and animations.
-glide,25311,14709,3052,https://github.com/bumptech/glide.git,An image loading and caching library for Android focused on smooth scrolling
-leakcanary,24535,14657,2500,https://github.com/square/leakcanary.git,A memory leak detection library for Android and Java.
-EventBus,1443,14184,3568,https://github.com/greenrobot/EventBus.git,Android optimized event bus that simplifies communication between Activities, Fragments, Threads, Services, etc. Less code, better quality.
-spring-framework,99410,13460,10068,https://github.com/spring-projects/spring-framework.git,The Spring Framework
-picasso,9076,13161,3512,https://github.com/square/picasso.git,A powerful image downloading and caching library for Android
-iosched,49635,13138,4908,https://github.com/google/iosched.git,The Google I/O 2016 Android App
-zxing,238265,13050,6245,https://github.com/zxing/zxing.git,Official ZXing ("Zebra Crossing") project home
-fresco,56656,12447,3285,https://github.com/facebook/fresco.git,An Android library for managing images and the memory they use.
-RxAndroid,723,11961,2079,https://github.com/ReactiveX/RxAndroid.git,RxJava bindings for Android
-lottie-android,100561,11828,1529,https://github.com/airbnb/lottie-android.git,Render After Effects animations natively on Android and iOS
-spring-boot,52709,11658,10797,https://github.com/spring-projects/spring-boot.git,Spring Boot
-libgdx,981159,11254,5162,https://github.com/libgdx/libgdx.git,Desktop/Android/HTML5/iOS Java game development framework
-SlidingMenu,32085,10352,5609,https://github.com/jfeinstein10/SlidingMenu.git,An Android library that allows you to easily create applications with slide-in menus. You may use it in your Android apps provided that you cite this project and include the license in your app. Thanks!
-android-async-http,4077,9752,4337,https://github.com/loopj/android-async-http.git,An Asynchronous HTTP Library for Android
-PhotoView,16709,9706,2888,https://github.com/chrisbanes/PhotoView.git,Implementation of ImageView for Android that supports zooming, by various touch gestures.
-netty,46385,9699,4747,https://github.com/netty/netty.git,Netty project - an event-driven asynchronous network application framework
-material-dialogs,153853,9331,1886,https://github.com/afollestad/material-dialogs.git,A beautiful, fluid, and customizable dialogs API.
-Hystrix,9369,9285,1835,https://github.com/Netflix/Hystrix.git,Hystrix is a latency and fault tolerance library designed to isolate points of access to remote systems, services and 3rd party libraries, stop cascading failure and enable resilience in complex distributed systems where failure is inevitable.
-androidannotations,21980,9180,2368,https://github.com/androidannotations/androidannotations.git,Fast Android Development. Easy maintainance.
-AndroidUtilCode,1665,9135,3016,https://github.com/Blankj/AndroidUtilCode.git,Android developers should collect the following utils(updating)
-storm,27015,8969,1795,https://github.com/nathanmarz/storm.git,Distributed and fault-tolerant realtime computation: stream processing, continuous computation, distributed RPC, and more
-Material-Animations,8730,8932,1917,https://github.com/lgvalle/Material-Animations.git,Android Transition animations explanation with examples.
-ViewPagerIndicator,8657,8801,4219,https://github.com/JakeWharton/ViewPagerIndicator.git,Paging indicator widgets compatible with the ViewPager from the Android Support Library and ActionBarSherlock.
-plaid,27314,8740,1826,https://github.com/nickbutcher/plaid.git,An Android app which provides design news & inspiration as well as being an example of implementing material design.
-fastjson,10009,8738,3082,https://github.com/alibaba/fastjson.git,:bullettrain_side: A fast JSON parser/generator for Java
-PocketHub,10442,8674,3725,https://github.com/pockethub/PocketHub.git,PocketHub Android App
-tinker,3787,8456,1739,https://github.com/Tencent/tinker.git,Tinker is a hot-fix solution library for Android, it supports dex, library and resources update without reinstall apk.
-Android-CleanArchitecture,5176,8310,2135,https://github.com/android10/Android-CleanArchitecture.git,This is a sample app that is part of a series of blog posts I have written about how to architect an android application using Uncle Bob's clean architecture approach.
-dubbo,6493,8242,7995,https://github.com/alibaba/dubbo.git,:loudspeaker: Dubbo is a distributed, high performance RPC framework empowering applications with service import/export capabilities.
-Android-PullToRefresh,4286,8080,5133,https://github.com/chrisbanes/Android-PullToRefresh.git,DEPRECATED
-interviews,19297,8080,862,https://github.com/kdn251/interviews.git,Everything you need to know to get the job.
-MaterialDesignLibrary,8930,8078,2367,https://github.com/navasmdc/MaterialDesignLibrary.git,This is a library with components of Android L to you use in android 2.2
-Signal-Android,109058,7740,2079,https://github.com/WhisperSystems/Signal-Android.git,A private messenger for Android.
-kotlin,374731,7730,825,https://github.com/JetBrains/kotlin.git,The Kotlin Programming Language
-AndroidSwipeLayout,395,7719,2183,https://github.com/daimajia/AndroidSwipeLayout.git,The Most Powerful Swipe Layout!
-flexbox-layout,48710,7664,799,https://github.com/google/flexbox-layout.git,Flexbox for Android 
-android-Ultra-Pull-To-Refresh,3474,7634,2539,https://github.com/liaohuqiu/android-Ultra-Pull-To-Refresh.git,Ultra Pull to Refresh for Android. Support all the views.
-HomeMirror,5989,7558,658,https://github.com/HannahMitt/HomeMirror.git,Android application powering the mirror in my house
-realm-java,51725,7524,1177,https://github.com/realm/realm-java.git,Realm is a mobile database: a replacement for SQLite & ORMs
-android-UniversalMusicPlayer,7796,7493,2468,https://github.com/googlesamples/android-UniversalMusicPlayer.git,This sample shows how to implement an audio media app that works across multiple form factors and provide a consistent user experience on Android phones, tablets, Auto, Wear and Cast devices
-greenDAO,7103,7404,2235,https://github.com/greenrobot/greenDAO.git,greenDAO is a light & fast ORM solution for Android that maps objects to SQLite databases.
-ActionBarSherlock,21244,7385,4101,https://github.com/JakeWharton/ActionBarSherlock.git,[DEPRECATED] Action bar implementation which uses the native action bar on Android 4.0+ and a custom implementation on pre-4.0 through a single API and theme.
-stetho,2048,7383,691,https://github.com/facebook/stetho.git,Stetho is a debug bridge for Android applications, enabling the powerful Chrome Developer Tools and much more.
-Android-ObservableScrollView,13780,7366,1877,https://github.com/ksoichiro/Android-ObservableScrollView.git,Android library to observe scroll events on scrollable views.
-MaterialDrawer,20266,7273,1516,https://github.com/mikepenz/MaterialDrawer.git,The flexible, easy to use, all in one drawer library for your Android project.
-AndroidViewAnimations,285,7234,1746,https://github.com/daimajia/AndroidViewAnimations.git,Cute view animation collection.
-FizzBuzzEnterpriseEdition,284,6985,360,https://github.com/EnterpriseQualityCoding/FizzBuzzEnterpriseEdition.git,FizzBuzz Enterprise Edition is a no-nonsense implementation of FizzBuzz made by serious businessmen for serious business purposes.
-java8-tutorial,218,6849,1205,https://github.com/winterbe/java8-tutorial.git,Modern Java - A Guide to Java 8
-CircleImageView,956,6643,1852,https://github.com/hdodenhof/CircleImageView.git,A circular ImageView for Android
-cheesesquare,1274,6602,1657,https://github.com/chrisbanes/cheesesquare.git,Demos the new Android Design library.
-BaseRecyclerViewAdapterHelper,58979,6569,1476,https://github.com/CymChad/BaseRecyclerViewAdapterHelper.git,Powerful and flexible RecyclerAdapter, www.recyclerview.org
+RxJava,41550,23793,4187,git://github.com/ReactiveX/RxJava.git
+elasticsearch,337841,22354,7442,git://github.com/elastic/elasticsearch.git
+retrofit,4379,20788,4294,git://github.com/square/retrofit.git
+okhttp,15907,19421,4866,git://github.com/square/okhttp.git
+java-design-patterns,14950,18482,6233,git://github.com/iluwatar/java-design-patterns.git
+guava,147294,16071,3806,git://github.com/google/guava.git
+butterknife,3384,15773,3364,git://github.com/JakeWharton/butterknife.git
+MPAndroidChart,20543,15277,4615,git://github.com/PhilJay/MPAndroidChart.git
+Android-Universal-Image-Loader,25335,15151,6400,git://github.com/nostra13/Android-Universal-Image-Loader.git
+glide,25355,14995,3101,git://github.com/bumptech/glide.git
+leakcanary,24548,14848,2528,git://github.com/square/leakcanary.git
+EventBus,1443,14340,3592,git://github.com/greenrobot/EventBus.git
+spring-framework,99641,13680,10196,git://github.com/spring-projects/spring-framework.git
+picasso,9077,13262,3509,git://github.com/square/picasso.git
+zxing,238274,13245,6288,git://github.com/zxing/zxing.git
+iosched,49635,13192,4912,git://github.com/google/iosched.git
+fresco,56607,12541,3313,git://github.com/facebook/fresco.git
+lottie-android,102150,12174,1593,git://github.com/airbnb/lottie-android.git
+RxAndroid,727,12129,2108,git://github.com/ReactiveX/RxAndroid.git
+spring-boot,53783,12019,11044,git://github.com/spring-projects/spring-boot.git
+libgdx,981186,11362,5190,git://github.com/libgdx/libgdx.git
+SlidingMenu,32085,10382,5606,git://github.com/jfeinstein10/SlidingMenu.git
+PhotoView,16709,9835,2911,git://github.com/chrisbanes/PhotoView.git
+netty,46771,9815,4795,git://github.com/netty/netty.git
+android-async-http,4077,9780,4337,git://github.com/loopj/android-async-http.git
+material-dialogs,153865,9467,1910,git://github.com/afollestad/material-dialogs.git
+Hystrix,9378,9418,1867,git://github.com/Netflix/Hystrix.git
+AndroidUtilCode,3377,9377,3096,git://github.com/Blankj/AndroidUtilCode.git
+androidannotations,21980,9230,2373,git://github.com/androidannotations/androidannotations.git
+interviews,19297,9042,1096,git://github.com/kdn251/interviews.git
+Material-Animations,8730,9033,1932,git://github.com/lgvalle/Material-Animations.git
+storm,27015,8974,1791,git://github.com/nathanmarz/storm.git
+fastjson,9859,8879,3132,git://github.com/alibaba/fastjson.git
+ViewPagerIndicator,8657,8848,4224,git://github.com/JakeWharton/ViewPagerIndicator.git
+plaid,27337,8827,1838,git://github.com/nickbutcher/plaid.git
+PocketHub,10473,8708,3727,git://github.com/pockethub/PocketHub.git
+tinker,3771,8572,1774,git://github.com/Tencent/tinker.git
+Android-CleanArchitecture,5176,8440,2161,git://github.com/android10/Android-CleanArchitecture.git
+dubbo,6495,8433,8129,git://github.com/alibaba/dubbo.git
+Android-PullToRefresh,4286,8109,5127,git://github.com/chrisbanes/Android-PullToRefresh.git
+MaterialDesignLibrary,8930,8101,2372,git://github.com/navasmdc/MaterialDesignLibrary.git
+kotlin,376070,7842,840,git://github.com/JetBrains/kotlin.git
+AndroidSwipeLayout,395,7799,2199,git://github.com/daimajia/AndroidSwipeLayout.git
+flexbox-layout,48719,7780,815,git://github.com/google/flexbox-layout.git
+Signal-Android,109607,7769,2092,git://github.com/WhisperSystems/Signal-Android.git
+android-Ultra-Pull-To-Refresh,3474,7715,2561,git://github.com/liaohuqiu/android-Ultra-Pull-To-Refresh.git
+realm-java,52042,7598,1194,git://github.com/realm/realm-java.git
+android-UniversalMusicPlayer,7796,7581,2502,git://github.com/googlesamples/android-UniversalMusicPlayer.git
+HomeMirror,5989,7564,658,git://github.com/HannahMitt/HomeMirror.git
+greenDAO,7103,7514,2257,git://github.com/greenrobot/greenDAO.git
+stetho,2048,7493,706,git://github.com/facebook/stetho.git
+Android-ObservableScrollView,13780,7423,1887,git://github.com/ksoichiro/Android-ObservableScrollView.git
+ActionBarSherlock,21244,7385,4091,git://github.com/JakeWharton/ActionBarSherlock.git
+MaterialDrawer,20266,7329,1529,git://github.com/mikepenz/MaterialDrawer.git
+AndroidViewAnimations,285,7300,1758,git://github.com/daimajia/AndroidViewAnimations.git
+FizzBuzzEnterpriseEdition,284,7026,360,git://github.com/EnterpriseQualityCoding/FizzBuzzEnterpriseEdition.git
+java8-tutorial,218,6924,1221,git://github.com/winterbe/java8-tutorial.git
+BaseRecyclerViewAdapterHelper,58988,6872,1534,git://github.com/CymChad/BaseRecyclerViewAdapterHelper.git
+CircleImageView,956,6768,1873,git://github.com/hdodenhof/CircleImageView.git
+cheesesquare,1277,6630,1664,git://github.com/chrisbanes/cheesesquare.git
+deeplearning4j,149399,6528,2931,git://github.com/deeplearning4j/deeplearning4j.git
+agera,966,6441,594,git://github.com/google/agera.git
+ExoPlayer,44444,6412,2230,git://github.com/google/ExoPlayer.git
+logger,2280,6311,1177,git://github.com/orhanobut/logger.git
+bazel,360253,6295,843,git://github.com/bazelbuild/bazel.git
+clojure,12376,6264,1057,git://github.com/clojure/clojure.git
+druid,45268,6189,3026,git://github.com/alibaba/druid.git
+AndroidSlidingUpPanel,3893,6148,1871,git://github.com/umano/AndroidSlidingUpPanel.git
+Calligraphy,1468,6141,799,git://github.com/chrisjenx/Calligraphy.git
+dagger,7033,6101,1870,git://github.com/square/dagger.git
+BottomBar,40778,6074,1119,git://github.com/roughike/BottomBar.git
+platform_frameworks_base,2414966,6064,4529,git://github.com/android/platform_frameworks_base.git
+AppIntro,20446,6042,1139,git://github.com/apl-devs/AppIntro.git
+vert.x,97919,6024,1126,git://github.com/eclipse/vert.x.git
+spark,2257,6018,1175,git://github.com/perwendel/spark.git
+PagerSlidingTabStrip,28964,5985,2821,git://github.com/astuetz/PagerSlidingTabStrip.git
+recyclerview-animators,67455,5971,1285,git://github.com/wasabeef/recyclerview-animators.git
+junit4,22024,5954,2303,git://github.com/junit-team/junit4.git
+MaterialViewPager,19522,5952,1192,git://github.com/florent37/MaterialViewPager.git
+presto,71660,5930,1916,git://github.com/prestodb/presto.git
+Android-Bootstrap,11401,5913,1333,git://github.com/Bearded-Hen/Android-Bootstrap.git
+physical-web,33446,5859,712,git://github.com/google/physical-web.git
+Android_Data,153,5826,1650,git://github.com/Freelander/Android_Data.git
+disruptor,7637,5753,1598,git://github.com/LMAX-Exchange/disruptor.git
+zipkin,18397,5667,861,git://github.com/openzipkin/zipkin.git
+dropwizard,47339,5633,43,git://github.com/dropwizard/dropwizard.git
+ListViewAnimations,25513,5530,1862,git://github.com/nhaarman/ListViewAnimations.git
+SimianArmy,15248,5411,745,git://github.com/Netflix/SimianArmy.git
+UltimateRecyclerView,7060,5327,1228,git://github.com/cymcsg/UltimateRecyclerView.git
+RxBinding,1198,5320,566,git://github.com/JakeWharton/RxBinding.git
+lottie-react-native,7748,5291,329,git://github.com/airbnb/lottie-react-native.git
+ion,11687,5222,955,git://github.com/koush/ion.git
+AndroidInterview-Q-A,41771,5174,1210,git://github.com/JackyAndroid/AndroidInterview-Q-A.git
+okhttputils,17226,5152,1989,git://github.com/hongyangAndroid/okhttputils.git
+DanmakuFlameMaster,3449,5113,1473,git://github.com/Bilibili/DanmakuFlameMaster.git
+kafka,46818,5091,3152,git://github.com/apache/kafka.git
+jedis,5757,5022,2225,git://github.com/xetorthio/jedis.git
+RxJava-Android-Samples,1055,5017,977,git://github.com/kaushikgopal/RxJava-Android-Samples.git
+guice,62785,4985,804,git://github.com/google/guice.git
+uCrop,63701,4978,878,git://github.com/Yalantis/uCrop.git
