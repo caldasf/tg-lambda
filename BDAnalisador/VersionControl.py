@@ -174,8 +174,8 @@ def main ():
 	date_before = '2017-2-1'
 
 	day = 01
-	month = 11
-	year = 2012
+	month = 04
+	year = 2017
 
 	while (year > 2012):
 

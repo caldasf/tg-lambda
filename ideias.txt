@@ -1,0 +1,8 @@
+# 	Para cada projeto, ver quais sao os metodos com expressoes lambda na sua versao mais recente e cuspir no csv (um pra cada projeto):
+# 		Projeto; Data; Metodo; linha inicio; fim;
+
+# 	depois pegar cada projeto que tem expressao lambda e ver a quantidade de expressoes lambda e aic pelos meses
+
+# 	achar o mes em que antes nao havia nenhuma expressao lambda e que no proximo ja comecou a existir no projeto e a partir dai, checar o antes e depois de cada expressao lambda no projeto e ver se (linha fim - linha inicio) de cada projeto mudou pra mais em cada metodo 
+
+#	Escolher 10 projetos aleatorios do ponto anterior e verificar se expressao lambda foi de fato codigo novo ou refatoracao (manualmente)
