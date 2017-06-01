@@ -14,7 +14,6 @@ public class DAOMetodo {
 		EntityManager manager = factory.createEntityManager();
 		
 		manager.getTransaction().begin();
-		//rever essa parte
 		
 		for (Metodo met : listaMetodos) {
 			manager.persist(met);

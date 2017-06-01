@@ -31,6 +31,7 @@ public class Controlador {
 	private DAOMetodo daoMetodo;
 	private String path = "";
 	private Integer idProjetoEncontrado;
+	private Long idClasse = 0L;
 	
 	public BufferedReader lerArquivo(String nomeArquivo) {
 		BufferedReader br = null;
@@ -170,7 +171,7 @@ public class Controlador {
 		
 		String sCurrentLine;
 		String nomeClasse = "";
-		Long idClasse = 0L;
+//		Long idClasse = 0L;
 		while ((sCurrentLine = br.readLine()) != null) {
 			if (!sCurrentLine.startsWith("typeProject")) {
 				String array[] = sCurrentLine.split(";");
@@ -189,10 +190,17 @@ public class Controlador {
 				
 				metodo.setIdClasse(idClasse);
 				metodo.setNomeClasse(nomeClasse);
+				try {
+					metodo.setLinhaInicio(new Integer(array[5]));
+					metodo.setLinhaFim(new Integer(array[6]));
+					metodo.setNome(array[7]);
+				}
+				catch (Exception e) {
+					metodo.setLinhaInicio(0);
+					metodo.setLinhaFim(0);
+					metodo.setNome("");
+				}
 				
-				metodo.setLinhaInicio(new Integer(array[5]));
-				metodo.setLinhaFim(new Integer(array[6]));
-				metodo.setNome(array[7]);
 				metodo.setQtdAic(0);
 				metodo.setQtdFilter(0);
 				metodo.setQtdForEach(0);
@@ -219,6 +227,14 @@ public class Controlador {
 
 	private void popularVersao() {
 		daoVersao.gravarVersao(versao);
+	}
+
+	public Long getIdClasse() {
+		return idClasse;
+	}
+
+	public void setIdClasse(Long idClasse) {
+		this.idClasse = idClasse;
 	}
 
 }
