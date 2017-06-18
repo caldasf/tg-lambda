@@ -1,3 +1,4 @@
+USE BDAnalisador;
 ALTER TABLE `Classe`
   ADD CONSTRAINT `Classe_fk_Versao` 
     FOREIGN KEY (`idVersao`)
