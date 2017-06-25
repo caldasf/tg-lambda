@@ -1,6 +1,5 @@
 #!/usr/bin/python
 
-
 import MySQLdb
 import datetime
 import csv
@@ -43,9 +42,12 @@ def average_per_project(project_file, project_name, project_id):
             qtd_filter += int(row[8])
 
 
-    fp.write("{}, {}, {}, {}, {}, {}, {}, {}, {}, {}\n".format(project_name, project_id, qtd_lambda, 
-        qtd_aic, qtd_maps, qtd_filter, calculate_average(qtd_lambda, n_lambda),
-        calculate_average(qtd_aic, n_aic),calculate_average(qtd_maps, n_maps), 
+    fp.write("{}, {}, {}, {}, {}, {}, {}, {}, {}, {}\n".format(
+        project_name, project_id, qtd_lambda, 
+        qtd_aic, qtd_maps, qtd_filter, 
+        calculate_average(qtd_lambda, n_lambda),
+        calculate_average(qtd_aic, n_aic),
+        calculate_average(qtd_maps, n_maps), 
         calculate_average(qtd_filter, n_filter)))
 
     fp.close()

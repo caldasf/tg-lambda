@@ -1,0 +1,5 @@
+class, method, before_id, after_id, before_size, after_size
+ImmutableSortedMap, of, 5402345, 4601862, 8, 4
+AtomicLongMap, put, 5401254, 4582145, 34, 7
+AtomicLongMap, removeAllZeros, 5401258, 4582149, 15, 8
+AtomicLongMap, putIfAbsent, 5401268, 4582158, 28, 19

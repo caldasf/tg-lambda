@@ -72,7 +72,7 @@ public class Controlador {
 		
 		path = System.getProperty("user.dir") + "/";
 
-		String[] cmd = new String[]{"/bin/sh", path + "import_db.sh"};
+		String[] cmd = new String[]{"/bin/sh", path + "sql/import_db.sh"};
 		Process pr = Runtime.getRuntime().exec(cmd);
 		
 		String inputCsv = path + "input.csv";
@@ -149,17 +149,22 @@ public class Controlador {
 		String sCurrentLine;
 		while ((sCurrentLine = br.readLine()) != null) {
 			if (!sCurrentLine.startsWith("typeProject")) {
-				String array[] = sCurrentLine.split(";");
-				String nomeClasse = array[4].substring(array[4].lastIndexOf("/")+1).split("\\.")[0];
-				
-				Integer linhaInicio = new Integer(array[5]);
-				Integer linhaFim = new Integer(array[6]);
-
-				for (Metodo met : listaMetodos) {
-					if (nomeClasse.equals(met.getNomeClasse()) && 
-						(linhaInicio >= met.getLinhaInicio() && linhaFim <= met.getLinhaFim())) {
-						incrementar(operacao, met);
+				try {
+					String array[] = sCurrentLine.split(";");
+					String nomeClasse = array[4].substring(array[4].lastIndexOf("/")+1).split("\\.")[0];
+					
+					Integer linhaInicio = new Integer(array[5]);
+					Integer linhaFim = new Integer(array[6]);
+	
+					for (Metodo met : listaMetodos) {
+						if (nomeClasse.equals(met.getNomeClasse()) && 
+							(linhaInicio >= met.getLinhaInicio() && linhaFim <= met.getLinhaFim())) {
+							incrementar(operacao, met);
+						}
 					}
+				} finally {
+					continue;
+				
 				}
 			}
 		}
@@ -177,36 +182,40 @@ public class Controlador {
 				String array[] = sCurrentLine.split(";");
 				
 				Metodo metodo = new Metodo();
-				
-				if (!nomeClasse.equals(array[4].substring(array[4].lastIndexOf("/")+1).split("\\.")[0])) {
-					Classe classe = new Classe();
-					classe.setNome(array[4].substring(array[4].lastIndexOf("/")+1).split("\\.")[0]);
-					classe.setVersao(versao.getId());
-					idClasse += 1;
-					listaClasses.add(classe);
-//					idClasse = daoClasse.gravarClasse(classe);
-				}
-				nomeClasse = array[4].substring(array[4].lastIndexOf("/")+1).split("\\.")[0];
-				
-				metodo.setIdClasse(idClasse);
-				metodo.setNomeClasse(nomeClasse);
 				try {
-					metodo.setLinhaInicio(new Integer(array[5]));
-					metodo.setLinhaFim(new Integer(array[6]));
-					metodo.setNome(array[7]);
+					if (!nomeClasse.equals(array[4].substring(array[4].lastIndexOf("/")+1).split("\\.")[0])) {
+						Classe classe = new Classe();
+						classe.setNome(array[4].substring(array[4].lastIndexOf("/")+1).split("\\.")[0]);
+						classe.setVersao(versao.getId());
+						idClasse += 1;
+						listaClasses.add(classe);
+	//					idClasse = daoClasse.gravarClasse(classe);
+					}
+					nomeClasse = array[4].substring(array[4].lastIndexOf("/")+1).split("\\.")[0];
+					
+					metodo.setIdClasse(idClasse);
+					metodo.setNomeClasse(nomeClasse);
+					try {
+						metodo.setLinhaInicio(new Integer(array[5]));
+						metodo.setLinhaFim(new Integer(array[6]));
+						metodo.setNome(array[7]);
+					}
+					catch (Exception e) {
+						metodo.setLinhaInicio(0);
+						metodo.setLinhaFim(0);
+						metodo.setNome("");
+					}
+					
+					metodo.setQtdAic(0);
+					metodo.setQtdFilter(0);
+					metodo.setQtdForEach(0);
+					metodo.setQtdLambda(0);
+					metodo.setQtdMaps(0);
+					listaMetodos.add(metodo);
 				}
-				catch (Exception e) {
-					metodo.setLinhaInicio(0);
-					metodo.setLinhaFim(0);
-					metodo.setNome("");
+				finally {
+					continue;
 				}
-				
-				metodo.setQtdAic(0);
-				metodo.setQtdFilter(0);
-				metodo.setQtdForEach(0);
-				metodo.setQtdLambda(0);
-				metodo.setQtdMaps(0);
-				listaMetodos.add(metodo);
 			}
 		}
 	}
