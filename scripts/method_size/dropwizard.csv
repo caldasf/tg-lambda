@@ -1,0 +1,10 @@
+class, method, before_id, after_id, before_size, after_size
+AuthUtil, getTestAuthorizer, 14324214, 13630688, 10, 5
+DBIFactory, SanerNamingStrategy, 14323321, 13629793, 11, 6
+OptionalParamConverterProvider, getConverter, 14325174, 13631784, 49, 43
+OptionalParamConverterProvider, getConverter, 14325174, 13631721, 49, 44
+OptionalParamConverterProvider, fromString, 14325177, 13631787, 9, 3
+OptionalParamConverterProvider, fromString, 14325177, 13631724, 9, 4
+AuthUtil, getBasicAuthenticator, 14324208, 13630685, 13, 10
+AuthUtil, getSingleUserOAuthAuthenticator, 14324210, 13630686, 14, 11
+AuthUtil, getMultiplyUsersOAuthAuthenticator, 14324212, 13630687, 13, 10

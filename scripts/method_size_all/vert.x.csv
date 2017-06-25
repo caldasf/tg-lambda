@@ -1,0 +1,4 @@
+class, method, before_id, after_id, before_size, after_size
+DefaultEventBus, close, 25787466, 25232931, 8, 10
+DefaultEventBus, close, 25787518, 25232931, 3, 10
+DefaultEventBus, close, 25787466, 25232931, 8, 10

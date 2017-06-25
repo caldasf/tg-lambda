@@ -1,0 +1,5 @@
+class, method, before_id, after_id, before_size, after_size
+UserDataRepository, getUsers, 18047747, 17378310, 4, 6
+UserDataRepository, getUser, 18047748, 17378311, 3, 5
+UserDataRepository, getUsers, 18047747, 17378310, 4, 6
+UserDataRepository, getUser, 18047748, 17378311, 3, 5

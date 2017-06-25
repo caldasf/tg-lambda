@@ -6,3 +6,6 @@
 # 	achar o mes em que antes nao havia nenhuma expressao lambda e que no proximo ja comecou a existir no projeto e a partir dai, checar o antes e depois de cada expressao lambda no projeto e ver se (linha fim - linha inicio) de cada projeto mudou pra mais em cada metodo 
 
 #	Escolher 10 projetos aleatorios do ponto anterior e verificar se expressao lambda foi de fato codigo novo ou refatoracao (manualmente)
+
+
+https://stackoverflow.com/questions/1108/how-does-database-indexing-work

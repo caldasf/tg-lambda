@@ -1,0 +1,5 @@
+class, method, before_id, after_id, before_size, after_size
+HystrixUtilizationStream, HystrixUtilizationStream, 10447592, 9677314, 8, 20
+HystrixRequestEventsStream, HystrixRequestEventsStream, 10447725, 9677297, 3, 20
+HystrixUtilizationStream, HystrixUtilizationStream, 10447592, 9677314, 8, 20
+HystrixRequestEventsStream, HystrixRequestEventsStream, 10447725, 9677297, 3, 20
