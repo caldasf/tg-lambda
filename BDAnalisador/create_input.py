@@ -95,7 +95,7 @@ class CreateInput():
         print('\n# Cloning listed repositories #')
         input_file = self.projects_file
         clone_dir = self.projects_dir
-
+        # print clone_dir
         if not os.path.exists(clone_dir):
             os.makedirs(clone_dir)
 
@@ -103,13 +103,15 @@ class CreateInput():
         try:
             reader = csv.reader(f)
             for row in reader:
-                if os.listdir(work_path):
-                    os.system('git clone {} {}/{}'.format(row[4], clone_dir, row[0]))
+                work_dir = os.path.join(clone_dir, row[0])
+                # print work_dir
+                if not os.path.isdir(work_dir):
+                    os.mkdir(work_dir)
+                if not os.listdir(work_dir):
+                    print('git clone {} {}'.format(row[4], work_dir))
+                    os.system('git clone {} {}'.format(row[4], work_dir))
                 else:
-                    print ("Error: {}/{} is not an empty \
-                        repository.".format(clone_dir, row[0]))
-        except:
-            print("Error: Unexpected error happened while cloning repositories.")
+                    print("Error: {} is not an empty repository.".format(work_dir))
         finally:
             f.close() 
 
@@ -120,21 +122,21 @@ class CreateInput():
     def count_code_lines(self):
         print ('\n# Counting # of lines of projects #')
 
-        summary_file = "summary.csv"
+        summary_file = os.path.join(os.getcwd(), "summary.csv")
         projects_dir = self.projects_dir
         sloc_dir = 'sloc/'
-        keepTempFiles = 'no'
+        keepTempFiles = 'yes'
         files = listdir(projects_dir)
 
         if not os.path.exists(sloc_dir):
             os.makedirs(sloc_dir)
 
         for f in files:
-            print (f)
-            print (projects_dir)
-            s = projects_dir + '/' + f 
+            s = os.path.join(projects_dir, f)
             if(isdir(s)):
-                system('cloc ' + s + ' --csv --out=' + sloc_dir + "/" + f + ".csv")
+                cloc_out_path = os.path.join(sloc_dir, f + ".csv")
+                os.system('cloc {} --csv --out={}'.format(s, cloc_out_path))
+                # system('cloc ' + s + ' --csv --out=' + os.path.dir(sloc_dir, f + ".csv"))
 
         files = [f for f in listdir(sloc_dir) if f.endswith(".csv")]
         fout = file(summary_file, "w")  
@@ -150,17 +152,18 @@ class CreateInput():
                 if(count == 0): 
                     row.insert(0, 'project')
                 else: 
-                    if(self.lang == 'C++' and (row[1] == "C++" or row[1].startswith("C/C++"))):
-                        base += int(row[4])
-                    elif(row[1] == self.lang):
+                    print row
+                    if(row[1] == self.lang):
+                        print base
                         base += int(row[4]) 
                     else: 
                         other += int(row[4])
+
                     row.insert(0, f)
                 count += 1
             
             writer = csv.writer(fout)
-            writer.writerow((f, base, other))
+            writer.writerow((f, base))
             aFile.close()
                                 
             if(keepTempFiles == 'no'): 
@@ -185,7 +188,6 @@ class CreateInput():
 
         for row in reader:
             project_name = row[0][:-4]
-            print project_name
             cur_project_path = os.path.join(self.projects_dir, project_name)
             # No version checking yet, default at 1 for now
             fout.write(';;{};1;{};{};\n'.format(project_name, cur_project_path, row[1]))

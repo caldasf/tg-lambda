@@ -43,7 +43,9 @@ def add_final_input(month_input):
 
     with open(month_input, "r") as bFile:
         projects = csv.reader(bFile, delimiter=";")
+
         for row in projects:
+            # print row
             output.write("{};{};{};{};{};{};{};\n".format(row[0],
                         row[1], row[2], row[3], row[4], row[5], row[6]))
 
@@ -69,6 +71,7 @@ def find_project(project_name_key, sloc_fp):
 def count_lines_code(month_input_path, temp_input_path, create_obj):
 
     sloc_file_path = create_obj.count_code_lines()
+    print sloc_file_path
     vet = [0 for i in xrange(500)]
     i = 0
 
@@ -76,6 +79,7 @@ def count_lines_code(month_input_path, temp_input_path, create_obj):
         projects = csv.reader(bFile, delimiter=";")
         for project in projects:
             vet[i] = find_project(project[2], sloc_file_path)
+            print vet[i]
             i += 1
     bFile.close()
 
@@ -102,6 +106,7 @@ def is_non_zero_file(fpath):
 def change_input(date_after, date_before, create_obj):
     global projects_dir
 
+
     month_input = "{}input-{}_{}.csv".format(inputs_path, date_after, date_before)
     temp_input_path = os.getcwd() + "/temp1.csv"
 
@@ -111,17 +116,19 @@ def change_input(date_after, date_before, create_obj):
         temp_input_file = open(temp_input_path, 'w')  # temp file for sloc
 
         for project in projects:
-            path_project = "{}/".format(project[4])
+            path_project = os.path.join(projects_dir, project[4])
+            # print "==========  {}  =========".format(path_project)
 
             # change working directory to project directory
             os.chdir(path_project)
+            temp_result_path = os.path.join(path_project, 'temp.csv')
             os.system('git log --after="{}" --before="{}" -1 \
-                --date=format:"%Y-%m-%d" --pretty=format:"%H, %an, %cd, %s" > temp.csv\
-                '.format(date_after, date_before))
+                --date=format:"%Y-%m-%d" --pretty=format:"%H, %an, %cd, %s" > {}\
+                '.format(date_after, date_before, temp_result_path))
 
-            if (is_non_zero_file(path_project + 'temp.csv')):
-
-                f = open('temp.csv', 'rt')
+            if (is_non_zero_file(temp_result_path)):
+                # print temp_result_path
+                f = open(temp_result_path, 'rt')
                 git_temp_rows = csv.reader(f)
 
                 for row in git_temp_rows:
@@ -147,7 +154,6 @@ def change_input(date_after, date_before, create_obj):
     add_final_input(month_input)
 
     os.remove(temp_input_path)
-    os.remove("summary.csv")
 
 
 def version_control(create_obj):
@@ -155,7 +161,7 @@ def version_control(create_obj):
     month = 06
     year = 2017
 
-    while (year > 2015):
+    while (year > 2016): 
         date_before = str(year) + '-' + str(month) + '-' + str(day)
 
         if (month > 1):
@@ -187,7 +193,7 @@ def check_args(myargs):
     i = 0
     try:
         for arg in sys.argv:
-            if (arg == '-path'):
+            if (arg == '--path'):
                 myargs["dir_path"] = sys.argv[i + 1]
             elif (arg == '--reset'):
                 reset()
@@ -197,7 +203,6 @@ def check_args(myargs):
             elif (arg == '--all' or (('--add' not in sys.argv)
                                      and ('--reset' not in sys.argv))):
                 reset()
-                print("yoo")
                 myargs["run_all"] = True
 
             i += 1
@@ -242,7 +247,6 @@ def main():
                 c.create()
             else:
                 pass
-
             create_dir()
             version_control(c)
 

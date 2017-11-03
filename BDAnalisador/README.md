@@ -1,6 +1,8 @@
 # BDAnalisador
-## About
-
+## Requirements
+- cloc
+- java
+- python 2.7.*
 
 ### create_input.py
 This script is called automatically by statis_analysis if no do the following tasks
